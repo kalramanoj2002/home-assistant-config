@@ -1,0 +1,12 @@
+# Usha iphone location status
+- action:
+    - data_template:
+        message: >
+          Usha just changed from {{ trigger.from_state.state }}
+          to {{ trigger.to_state.state }}
+      service: notify.notify
+  alias: Usha iphone location status
+  id: '1498944476197'
+  trigger:
+    platform: state
+    entity_id: device_tracker.usha_phone_65208ecf7fb14274b776984452a51469

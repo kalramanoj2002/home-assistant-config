@@ -1,0 +1,13 @@
+# Sun Down
+- action:
+  - data:
+      message: Its evening time, lets finish up our work
+    service: tts.google_say
+  alias: Sun Down
+  id: '1498944476194'
+  trigger:
+  - entity_id: sun.sun
+    from: above_horizon
+    platform: state
+    to: below_horizon
+    

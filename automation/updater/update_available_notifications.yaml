@@ -1,0 +1,10 @@
+# Update Available Notifications
+- action:
+  - data:
+     message: 'Update for Home Assistant is available.'
+    service: notify.notify
+  alias: 'Update Available Notifications'
+  id: '1498944476191'
+  trigger:
+    platform: state
+    entity_id: updater.updater

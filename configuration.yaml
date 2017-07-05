@@ -1,0 +1,92 @@
+homeassistant:
+  customize:
+    sensor.pihole_ads_blocked_today:
+      friendly_name: Blocked Today
+    sensor.pihole_ads_percentage_blocked_today:
+      friendly_name: Blocked Today (%)
+    sensor.pihole_dns_queries_today:
+      friendly_name: Total DNS Queries Today 
+    script.msg_who_is_home:
+      hidden: true
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret homeassistant_home_latitude
+  longitude: !secret homeassistant_home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 32
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_api_password
+  ssl_certificate: !secret http_ssl_certificate
+  ssl_key: !secret http_ssl_key
+  # Uncomment this if you are using SSL or running in Docker etc
+  base_url: !secret http_base_url
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+sensor: !include sensors.yaml
+
+ifttt:
+  key: !secret ifttt_key
+
+notify:
+  - platform: pushbullet
+    api_key: !secret notify_pushbullet_api_key
+
+# Text to speech
+tts:
+  platform: google
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+  - platform: nmap_tracker
+    hosts: 192.168.0.1/24
+    home_interval: 20
+
+mqtt:
+  broker: !secret mqtt_broker
+  port: !secret mqtt_port
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqtt_ha_username
+  password: !secret mqtt_ha_password
+
+script: !include script.yaml
+          
+group: !include groups.yaml
+automation: !include_dir_merge_list automation 

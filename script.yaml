@@ -1,0 +1,6 @@
+msg_who_is_home:
+  sequence:
+    - service: notify.notify
+      data_template: 
+        message: Monkey is at {{ states('device_tracker.usha_phone_65208ecf7fb14274b776984452a51469') }}.
+  

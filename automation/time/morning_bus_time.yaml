@@ -1,0 +1,17 @@
+# Morning bus time
+- action:
+  - data:
+      message: Time to catch the bus.
+    service: tts.google_say
+  alias: Morning bus time
+  id: '1498944476196'
+  trigger:
+    platform: time
+    at: '08:00:00'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - wed
+        - thu
+        
