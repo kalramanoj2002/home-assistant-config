@@ -23,6 +23,9 @@ homeassistant:
 # Enables the frontend
 frontend:
 
+#IOS
+ios:
+
 # Enables configuration UI
 config:
 
