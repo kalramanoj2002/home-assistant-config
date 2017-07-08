@@ -1,0 +1,7 @@
+- platform: google_travel_time
+  name: Port autority to home
+  api_key: !secret google_time_travel_api_key
+  origin: !secret port_authority_address
+  destination: zone.home
+  options: 
+    mode: transit

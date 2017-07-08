@@ -1,3 +1,4 @@
+# views
 environment_view:
   name: Environment
   view: yes
@@ -24,6 +25,12 @@ ios_stats_view:
   entities: 
     - group.ios_stats
 
+# groups
+transit_time:
+  name: Transit Time
+  entities:
+    - sensor.home_to_port_autority
+    - sensor.port_autority_to_home
 date_time: 
   name: Date Time
   entities:

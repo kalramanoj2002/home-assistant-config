@@ -92,4 +92,5 @@ mqtt:
 script: !include script.yaml
           
 group: !include groups.yaml
-automation: !include_dir_merge_list automation 
+automation: !include_dir_merge_list automation
+zone: !include zones.yaml

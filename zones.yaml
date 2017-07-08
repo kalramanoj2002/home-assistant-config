@@ -1,0 +1,10 @@
+- name: School
+  latitude: 40.7986257
+  longitude: -74.0591717
+  radius: 100
+  icon: mdi:school
+- name: Sams Club
+  latitude: 40.7916936
+  longitude: -74.0457669
+  radius: 100
+  icon: mdi:cart
