@@ -33,6 +33,23 @@ environment:
   entities:
     - sun.sun
     - sensor.yr_symbol
+    - sensor.yr_cloudiness
+    - sensor.yr_dewpoint_temperature
+    - sensor.yr_fog
+    - sensor.yr_high_clouds
+    - sensor.yr_humidity
+    - sensor.yr_low_clouds
+    - sensor.yr_medium_clouds
+    - sensor.yr_precipitation
+    - sensor.yr_pressure
+    - sensor.yr_temperature
+    - sensor.yr_wind_direction
+    - sensor.yr_wind_speed
+    - sensor.owm_cloud_coverage
+    - sensor.owm_condition
+    - sensor.owm_rain
+    - sensor.owm_snow
+    - sensor.owm_temperature
 pi_hole:
   name: Ad Blocker
   entities:
@@ -65,6 +82,7 @@ devices:
     - device_tracker.bc773781479b
     - device_tracker.cc95d78bd8cf
     - device_tracker.f4f5d8d2cb9e
+    - device_tracker.f80d601a14d1
 ios_stats:
   name: IOS Status
   entities:

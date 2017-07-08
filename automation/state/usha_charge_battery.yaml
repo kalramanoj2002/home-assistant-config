@@ -1,0 +1,11 @@
+# Usha Charge your phone
+- action:
+    - data:
+        message: Hey Usha, Charge your phone 
+      service: tts.google_say
+  alias: Charge Usha phone
+  id: '1498944471'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.usha_battery_level
+    below: 30

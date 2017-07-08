@@ -1,0 +1,11 @@
+# Ipad charge
+- action:
+    - data:
+        message: Hey Shaurya, Charge your IPad 
+      service: tts.google_say
+  alias: Charge Ipad 
+  id: '149894447'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.manoj_kumars_ipad_battery_level
+    below: 30

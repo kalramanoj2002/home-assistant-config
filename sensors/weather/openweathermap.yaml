@@ -1,0 +1,10 @@
+# openweathermap
+- platform: openweathermap
+  api_key: !secret openweathermap_key
+  forecast:
+  monitored_conditions:
+    - weather
+    - temperature
+    - clouds
+    - rain
+    - snow

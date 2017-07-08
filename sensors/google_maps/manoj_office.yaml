@@ -1,0 +1,5 @@
+- platform: google_travel_time
+  name: Manoj to office
+  api_key: !secret google_time_travel_api_key
+  origin: device_tracker.manoj_phone_a20782d386ce49469c6ffefc4e14b627
+  destination: !secret manoj_office_address

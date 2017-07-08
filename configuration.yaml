@@ -61,7 +61,7 @@ logbook:
 # Track the sun
 sun:
 
-sensor: !include sensors.yaml
+sensor: !include_dir_merge_list sensors
 
 ifttt:
   key: !secret ifttt_key
