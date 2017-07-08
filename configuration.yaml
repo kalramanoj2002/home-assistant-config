@@ -94,3 +94,4 @@ script: !include script.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
 zone: !include zones.yaml
+camera: !include_dir_list cameras/
