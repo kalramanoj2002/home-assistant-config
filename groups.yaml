@@ -29,8 +29,14 @@ ios_stats_view:
 transit_time:
   name: Transit Time
   entities:
-    - sensor.home_to_port_autority
-    - sensor.port_autority_to_home
+    - sensor.122_to_city_mapple_st
+    - sensor.122_to_city_first_st
+    - sensor.122_to_city_golden_ave
+    - sensor.190_to_city
+    - sensor.122_to_home
+    - sensor.190_to_home
+    - sensor.home_to_port_autority_car
+    - sensor.port_autority_to_home_car
 date_time: 
   name: Date Time
   entities:

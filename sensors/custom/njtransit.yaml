@@ -1,1 +1,35 @@
 - platform: njtransit
+  name: 190 to city
+  route: 190
+  direction: New%20York
+  stop_id: 21625
+
+- platform: njtransit
+  name: 122 to city (first st)
+  route: 122
+  direction: New%20York
+  stop_id: 21609
+
+- platform: njtransit
+  name: 122 to city (Mapple st)
+  route: 122
+  direction: New%20York
+  stop_id: 21608
+
+- platform: njtransit
+  name: 122 to city (GOLDEN AVE)
+  route: 122
+  direction: New%20York
+  stop_id: 21570
+
+- platform: njtransit
+  name: 122 to home 
+  route: 122
+  direction: Secaucus
+  stop_id: 26229
+
+- platform: njtransit
+  name: 190 to home 
+  route: 190
+  direction: paterson
+  stop_id: 26229
