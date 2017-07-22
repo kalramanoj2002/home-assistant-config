@@ -1,17 +1,17 @@
-# Morning bus time
+# Bed time
 - action:
   - data:
-      message: Time to catch the bus.
+      message: Time to go to bed.
     service: tts.google_say
-  alias: Morning bus time
+  alias: Bed time
   id: '1498944476196'
   trigger:
     platform: time
-    at: '08:00:00'
+    at: '22:00:00'
   condition:
     - condition: time
       weekday:
-        - mon
+        - sun
+        - tue
         - wed
-        - thu
         

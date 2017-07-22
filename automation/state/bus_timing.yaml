@@ -1,0 +1,19 @@
+# Morning bus time
+- action:
+  - data_template:
+      message: "Bus is coming in {{ trigger.to_state.state }} min"
+    service: tts.google_say
+  alias: Office Bus timing
+  id: '1498944471196'
+  trigger:
+    platform: state
+    entity_id: sensor.122_to_city_mapple_st
+  condition:
+    - condition: time
+      after: '07:30:00'
+      before: '08:20:00'
+      weekday:
+        - mon
+        - wed
+        - thu
+        
