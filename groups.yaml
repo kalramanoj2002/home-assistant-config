@@ -20,7 +20,7 @@ devices_view:
   entities:
     - group.devices 
 ios_stats_view:
-  name: IOS Status
+  name: Charge Stats
   view: yes
   entities: 
     - group.ios_stats
@@ -96,8 +96,9 @@ devices:
     - device_tracker.cc95d78bd8cf
     - device_tracker.f4f5d8d2cb9e
     - device_tracker.f80d601a14d1
+    - device_tracker.086698170362
 ios_stats:
-  name: IOS Status
+  name: Charge Stats
   entities:
     - sensor.manoj_kumars_ipad_battery_level
     - sensor.manoj_kumars_ipad_battery_state

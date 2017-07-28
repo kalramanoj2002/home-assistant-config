@@ -1,7 +1,7 @@
 # openweathermap
 - platform: openweathermap
   api_key: !secret openweathermap_key
-  forecast:
+  forecast: 0
   monitored_conditions:
     - weather
     - temperature
