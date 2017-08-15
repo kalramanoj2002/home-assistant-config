@@ -1,0 +1,3 @@
+platform: mjpeg
+mjpeg_url: http://kalramanoj2002.duckdns.org:7081/
+name: home

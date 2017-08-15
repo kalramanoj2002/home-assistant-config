@@ -33,6 +33,10 @@ homeassistant:
 # Enables the frontend
 frontend:
 
+weather:
+  - platform: openweathermap
+    api_key: !secret openweathermap_key
+
 # Enable python scripts
 python_script:
 
@@ -61,6 +65,8 @@ updater:
 
 # Discover some devices automatically
 discovery:
+
+shopping_list:
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -103,8 +109,18 @@ mqtt:
   password: !secret mqtt_ha_password
 
 script: !include script.yaml
-          
+
+intent_script: 
+  GetBusTime:  # Intent type
+    speech:
+      text: You have {{ states.sensor['122_to_city_mapple_st'].state }} min
+    action:
+      service: notify.notify
+      data_template:
+        message: Hello from an intent!
+
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
 zone: !include zones.yaml
 camera: !include_dir_list cameras/
+shell_command: !include misc/shell_commands.yaml

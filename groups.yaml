@@ -103,6 +103,7 @@ devices:
     - device_tracker.f4f5d8d2cb9e
     - device_tracker.f80d601a14d1
     - device_tracker.086698170362
+    - device_tracker.949aa98cdf52
 ios_stats:
   name: Charge Stats
   entities:
