@@ -1,0 +1,11 @@
+# USD to INR above 65
+- action:
+    - data_template:
+        message: usd to inr increassed above {{states.sensor.inr.state}}
+      service: notify.notify
+  alias: USD to INR
+  id: '249894447'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.inr
+    above: 65
