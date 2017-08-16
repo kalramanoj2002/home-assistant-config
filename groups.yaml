@@ -93,7 +93,7 @@ pi_machine:
     - sensor.rest_sensor
     - sensor.myipopendnscom
 devices:
-  name: Devices Connected
+  name: Devices
   entities:
     - device_tracker.00184dffff07
     - device_tracker.4c32759e8f6f
@@ -104,6 +104,7 @@ devices:
     - device_tracker.f80d601a14d1
     - device_tracker.086698170362
     - device_tracker.949aa98cdf52
+    - device_tracker.b827eb0234f6
 ios_stats:
   name: Charge Stats
   entities:
