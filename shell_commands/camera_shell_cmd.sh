@@ -1,1 +1,1 @@
-sudo service motion $1
+sudo service motion $@

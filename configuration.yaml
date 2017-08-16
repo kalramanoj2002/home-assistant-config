@@ -124,3 +124,4 @@ automation: !include_dir_merge_list automation
 zone: !include zones.yaml
 camera: !include_dir_list cameras/
 shell_command: !include misc/shell_commands.yaml
+switch: !include_dir_list switches/
