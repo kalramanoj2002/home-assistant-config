@@ -26,6 +26,11 @@ ios_stats_view:
     - group.ios_stats
 
 # groups
+case_status:
+  name: Case Status
+  entities: 
+    - sensor.f1
+    - sensor.h4_ead
 transit_time:
   name: Transit Time
   entities:
@@ -105,6 +110,10 @@ devices:
     - device_tracker.086698170362
     - device_tracker.949aa98cdf52
     - device_tracker.b827eb0234f6
+    - device_tracker.40b4cd8f3da4
+    - device_tracker.b827eb0234f6
+    - device_tracker.949aa98cdf54
+    - device_tracker.dc3a5e0eba11
 ios_stats:
   name: Charge Stats
   entities:

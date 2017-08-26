@@ -1,21 +1,21 @@
 homeassistant:
   customize:
-    sensor.pihole_ads_blocked_today:
-      friendly_name: Blocked Today
-    sensor.pihole_ads_percentage_blocked_today:
-      friendly_name: Blocked Today (%)
-    sensor.pihole_dns_queries_today:
-      friendly_name: Total DNS Queries Today
-    sensor.pihole_dns_queries_cached:
-      friendly_name: DNS queries cached
-    sensor.pihole_dns_queries_forwarded:
-      friendly_name: DNS queries forwarded
-    sensor.pihole_dns_unique_clients:
-      friendly_name: Unique Clients
-    sensor.pihole_dns_unique_domains:
-      friendly_name: Unique Domains
-    sensor.pihole_domains_blocked:  
-      friendly_name: Domains blocked.
+    # sensor.pihole_ads_blocked_today:
+    #   friendly_name: Blocked Today
+    # sensor.pihole_ads_percentage_blocked_today:
+    #   friendly_name: Blocked Today (%)
+    # sensor.pihole_dns_queries_today:
+    #   friendly_name: Total DNS Queries Today
+    # sensor.pihole_dns_queries_cached:
+    #   friendly_name: DNS queries cached
+    # sensor.pihole_dns_queries_forwarded:
+    #   friendly_name: DNS queries forwarded
+    # sensor.pihole_dns_unique_clients:
+    #   friendly_name: Unique Clients
+    # sensor.pihole_dns_unique_domains:
+    #   friendly_name: Unique Domains
+    # sensor.pihole_domains_blocked:  
+    #   friendly_name: Domains blocked.
     script.msg_who_is_home:
       hidden: true
   # Name of the location where Home Assistant is running
@@ -93,6 +93,13 @@ notify:
 tts:
   platform: google
 
+media_player:
+  - platform: kodi
+    host: !secret kodi_host
+    port: !secret kodi_port
+    username: !secret kodi_username
+    password: !secret kodi_password
+    
 device_tracker:
   - platform: owntracks
     max_gps_accuracy: 200
@@ -110,6 +117,8 @@ mqtt:
 
 script: !include script.yaml
 
+wake_on_lan:
+  
 intent_script: 
   GetBusTime:  # Intent type
     speech:
