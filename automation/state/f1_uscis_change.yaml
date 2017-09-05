@@ -1,0 +1,10 @@
+# F1 Status change
+- action:
+    - data_template:
+        message: F1 Status change:- {{states.sensor.f1.attributes.details}}
+      service: notify.notify
+  alias: F1 staus change
+  id: '249394147'
+  trigger:
+    platform: state
+    entity_id: sensor.f1

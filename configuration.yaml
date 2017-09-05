@@ -94,6 +94,8 @@ tts:
   platform: google
 
 media_player:
+  - platform: roku
+    host: !secret roku_host
   - platform: kodi
     host: !secret kodi_host
     port: !secret kodi_port

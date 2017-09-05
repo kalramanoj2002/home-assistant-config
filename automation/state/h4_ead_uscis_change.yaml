@@ -1,0 +1,11 @@
+# H4 EAD Status change
+- action:
+    - data_template:
+        message: H4 EAD Status change:- {{states.sensor.h4_ead.attributes.details}}
+      service: notify.notify
+  alias: h4 staus change
+  id: '249894457'
+  trigger:
+    platform: state
+    entity_id: sensor.h4_ead
+    
