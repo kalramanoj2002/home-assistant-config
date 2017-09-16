@@ -2,6 +2,7 @@
 - action:
     - data:
         message: Hey Usha, Charge your phone 
+        entity_id: media_player.living_room_home
       service: tts.google_say
   alias: Charge Usha phone
   id: '1498944471'

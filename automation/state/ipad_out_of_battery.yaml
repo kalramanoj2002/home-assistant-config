@@ -1,7 +1,8 @@
 # Ipad charge
 - action:
     - data:
-        message: Hey Shaurya, Charge your IPad 
+        message: Hey Shaurya, Charge your IPad
+        entity_id: media_player.living_room_home 
       service: tts.google_say
   alias: Charge Ipad 
   id: '149894447'

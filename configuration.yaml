@@ -91,7 +91,9 @@ notify:
 
 # Text to speech
 tts:
-  platform: google
+  - platform: google
+
+alexa: 
 
 media_player:
   - platform: roku
