@@ -46,6 +46,16 @@ ios:
 # Enables configuration UI
 config:
 
+calendar:
+  - platform: todoist
+    token: !secret todoist_token
+    custom_projects:
+      - name: 'All Projects'
+      - name: 'Due Today'
+        due_date_days: 0
+      - name: 'Due This Week'
+        due_date_days: 7
+
 http:
   # Uncomment this to add a password (recommended!)
   api_password: !secret http_api_password
@@ -138,3 +148,6 @@ zone: !include zones.yaml
 camera: !include_dir_list cameras/
 shell_command: !include misc/shell_commands.yaml
 switch: !include_dir_list switches/
+logger:
+  logs:
+    homeassistant.components.http.ban: warning

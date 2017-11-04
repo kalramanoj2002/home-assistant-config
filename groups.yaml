@@ -86,13 +86,13 @@ pi_machine:
     - sensor.average_load_15m
     - sensor.average_load_1m
     - sensor.average_load_5m
-    - sensor.swap_use
+    - sensor.swap_used
     - sensor.swap_free
-    - sensor.swap_use_2
-    - sensor.disk_use_home
-    - sensor.ram_free
+    - sensor.swap_used_2
+    - sensor.disk_used_home
+    - sensor.ram_available
     - sensor.cpu_speed
-    - sensor.cpu_use
+    - sensor.cpu_used
     - sensor.last_boot
     - sensor.since_last_boot
     - sensor.rest_sensor
@@ -115,6 +115,7 @@ devices:
     - device_tracker.949aa98cdf54
     - device_tracker.dc3a5e0eba11
     - device_tracker.7cb0c2dae297
+    - device_tracker.64b5c6b69387
 ios_stats:
   name: Charge Stats
   entities:
