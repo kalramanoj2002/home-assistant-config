@@ -1,5 +1,5 @@
 - platform: rest
-  name: INR
+  name: INR Fixer
   resource: http://api.fixer.io/latest?base=USD
   value_template: '{{ value_json.rates.INR }}'
   

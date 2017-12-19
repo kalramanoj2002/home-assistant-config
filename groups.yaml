@@ -58,7 +58,8 @@ due_dates:
     - sensor.usha_sbi
 stocks:
   name: Stocks
-  entities: 
+  entities:
+    - sensor.inr 
     - sensor.GOOGL
     - sensor.GOOG
     - sensor.MSFT
