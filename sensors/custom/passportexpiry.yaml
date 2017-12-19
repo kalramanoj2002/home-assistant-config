@@ -1,0 +1,17 @@
+- platform: expirydaysleft
+  name: Manoj Passport
+  expiry_date: !secret manoj_passport_expiry
+  renew_days: 365
+  scan_interval: 43200
+
+- platform: expirydaysleft
+  name: Usha Passport
+  expiry_date: !secret usha_passport_expiry
+  renew_days: 365
+  scan_interval: 43200
+
+- platform: expirydaysleft
+  name: Shaurya Passport
+  expiry_date: !secret shaurya_passport_expiry
+  renew_days: 365
+  scan_interval: 43200

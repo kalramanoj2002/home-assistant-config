@@ -1,0 +1,10 @@
+- platform: expirydaysleft
+  name: Manoj DL
+  expiry_date: !secret manoj_dl_expiry
+  renew_days: 180
+  scan_interval: 43200
+- platform: expirydaysleft
+  name: Usha DL
+  expiry_date: !secret usha_dl_expiry
+  renew_days: 180
+  scan_interval: 43200

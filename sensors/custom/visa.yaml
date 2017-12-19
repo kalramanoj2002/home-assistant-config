@@ -1,0 +1,5 @@
+- platform: expirydaysleft
+  name: Manoj I797
+  expiry_date: !secret manoj_visa_expiry
+  renew_days: 180
+  scan_interval: 43200

@@ -29,6 +29,11 @@ stocks_view:
   view: yes
   entities: 
     - group.stocks
+expiry_dates_view:
+  name: Expiry Dates
+  view: yes
+  entities: 
+    - group.expiry_dates
 
 # groups
 case_status:
@@ -36,8 +41,23 @@ case_status:
   entities: 
     - sensor.f1
     - sensor.h4_ead
+expiry_dates:
+  name: Expiry Dates
+  entities: 
+    - sensor.manoj_passport
+    - sensor.usha_passport
+    - sensor.shaurya_passport
+    - sensor.manoj_I797
+    - sensor.manoj_dl
+    - sensor.usha_dl
+    - sensor.honda_vehicle_reg
+    - sensor.progressive_insurance
+    - sensor.manoj_lic
+    - sensor.manoj_parent_lic
+    - sensor.usha_lic
+    - sensor.usha_sbi
 stocks:
-  name: stocks
+  name: Stocks
   entities: 
     - sensor.GOOGL
     - sensor.GOOG

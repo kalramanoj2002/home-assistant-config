@@ -1,0 +1,23 @@
+- platform: expirydaysleft
+  name: Manoj LIC
+  expiry_date: !secret manoj_lic_premium_due
+  renew_days: 30
+  scan_interval: 43200
+
+- platform: expirydaysleft
+  name: Manoj Parent LIC
+  expiry_date: !secret manoj_parent_lic_premium_due
+  renew_days: 30
+  scan_interval: 43200
+
+- platform: expirydaysleft
+  name: Usha LIC
+  expiry_date: !secret usha_lic_premium_due
+  renew_days: 30
+  scan_interval: 43200
+
+- platform: expirydaysleft
+  name: Usha SBI
+  expiry_date: !secret usha_sbi_premium_due
+  renew_days: 30
+  scan_interval: 43200

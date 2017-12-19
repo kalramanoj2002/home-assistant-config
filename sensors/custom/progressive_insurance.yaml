@@ -1,0 +1,5 @@
+- platform: expirydaysleft
+  name: Progressive Insurance
+  expiry_date: !secret progressive_insurance_expiry
+  renew_days: 30
+  scan_interval: 43200
