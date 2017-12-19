@@ -24,6 +24,11 @@ ios_stats_view:
   view: yes
   entities: 
     - group.ios_stats
+stocks_view:
+  name: Stocks
+  view: yes
+  entities: 
+    - group.stocks
 
 # groups
 case_status:
@@ -31,6 +36,15 @@ case_status:
   entities: 
     - sensor.f1
     - sensor.h4_ead
+stocks:
+  name: stocks
+  entities: 
+    - sensor.GOOGL
+    - sensor.GOOG
+    - sensor.MSFT
+    - sensor.GE
+    - sensor.UPS
+    - sensor.DAL
 transit_time:
   name: Transit Time
   entities:
@@ -116,6 +130,7 @@ devices:
     - device_tracker.dc3a5e0eba11
     - device_tracker.7cb0c2dae297
     - device_tracker.64b5c6b69387
+    - device_tracker.98e7f4afe766
 ios_stats:
   name: Charge Stats
   entities:
