@@ -29,11 +29,11 @@ stocks_view:
   view: yes
   entities: 
     - group.stocks
-expiry_dates_view:
-  name: Expiry Dates
+due_dates_view:
+  name: Renew Stuff
   view: yes
   entities: 
-    - group.expiry_dates
+    - group.due_dates
 
 # groups
 case_status:
@@ -41,8 +41,8 @@ case_status:
   entities: 
     - sensor.f1
     - sensor.h4_ead
-expiry_dates:
-  name: Expiry Dates
+due_dates:
+  name: Renew Stuff
   entities: 
     - sensor.manoj_passport
     - sensor.usha_passport

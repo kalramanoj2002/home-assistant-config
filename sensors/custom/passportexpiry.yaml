@@ -1,17 +1,17 @@
-- platform: expirydaysleft
+- platform: calculateduedays
   name: Manoj Passport
-  expiry_date: !secret manoj_passport_expiry
+  due_date: !secret manoj_passport_due_date
   renew_days: 365
   scan_interval: 43200
 
-- platform: expirydaysleft
+- platform: calculateduedays
   name: Usha Passport
-  expiry_date: !secret usha_passport_expiry
+  due_date: !secret usha_passport_due_date
   renew_days: 365
   scan_interval: 43200
 
-- platform: expirydaysleft
+- platform: calculateduedays
   name: Shaurya Passport
-  expiry_date: !secret shaurya_passport_expiry
+  due_date: !secret shaurya_passport_due_date
   renew_days: 365
   scan_interval: 43200

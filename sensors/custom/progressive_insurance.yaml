@@ -1,5 +1,5 @@
-- platform: expirydaysleft
+- platform: calculateduedays
   name: Progressive Insurance
-  expiry_date: !secret progressive_insurance_expiry
+  due_date: !secret progressive_insurance_due_date
   renew_days: 30
   scan_interval: 43200

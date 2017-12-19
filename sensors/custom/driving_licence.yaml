@@ -1,10 +1,10 @@
-- platform: expirydaysleft
+- platform: calculateduedays
   name: Manoj DL
-  expiry_date: !secret manoj_dl_expiry
+  due_date: !secret manoj_dl_due_date
   renew_days: 180
   scan_interval: 43200
-- platform: expirydaysleft
+- platform: calculateduedays
   name: Usha DL
-  expiry_date: !secret usha_dl_expiry
+  due_date: !secret usha_dl_due_date
   renew_days: 180
   scan_interval: 43200

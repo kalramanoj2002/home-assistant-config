@@ -1,5 +1,5 @@
-- platform: expirydaysleft
+- platform: calculateduedays
   name: Manoj I797
-  expiry_date: !secret manoj_visa_expiry
+  due_date: !secret manoj_visa_due_date
   renew_days: 180
   scan_interval: 43200

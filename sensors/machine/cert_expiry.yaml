@@ -1,5 +1,5 @@
 # cert expiry
-- platform: cert_expiry
+- platform: cert_due_date
   host: !secret http_base_url
   port: 443
   scan_interval: 400
