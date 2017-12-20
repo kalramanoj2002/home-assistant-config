@@ -2,6 +2,7 @@
   name: Manoj Passport
   due_date: !secret manoj_passport_due_date
   renew_days: 365
+  scan_interval: 43200
 
 - platform: calculateduedays
   name: Usha Passport
