@@ -1,9 +1,9 @@
 - platform: alpha_vantage
-  api_key:  !secret alpha_vantage_api_key
+  api_key: !secret alpha_vantage_api_key
   symbols: 
-    - GOOGL
-    - GOOG
-    - MSFT
-    - GE
-    - UPS
-    - DAL
+    - symbol: GOOGL
+    - symbol: GOOG
+    - symbol: MSFT
+    - symbol: GE
+    - symbol: UPS
+    - symbol: DAL

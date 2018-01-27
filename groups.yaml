@@ -29,6 +29,7 @@ stocks_view:
   view: yes
   entities: 
     - group.stocks
+    - group.gdax
 due_dates_view:
   name: Renew Stuff
   view: yes
@@ -40,7 +41,6 @@ case_status:
   name: Case Status
   entities: 
     - sensor.f1
-    - sensor.h4_ead
 due_dates:
   name: Renew Stuff
   entities: 
@@ -66,6 +66,12 @@ stocks:
     - sensor.GE
     - sensor.UPS
     - sensor.DAL
+gdax:
+  name: Gdax Prices
+  entities:
+    - sensor.eth_price
+    - sensor.btc_price
+    - sensor.ltc_price
 transit_time:
   name: Transit Time
   entities:

@@ -2,9 +2,4 @@
   name: F1
   case_number: !secret case_number_f1
   scan_interval: 7200
-
-- platform: casestatus
-  name: H4 Ead
-  case_number: !secret case_number_h4_ead
-  scan_interval: 7200
   
