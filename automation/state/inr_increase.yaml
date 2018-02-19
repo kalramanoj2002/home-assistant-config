@@ -8,4 +8,4 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.inr
-    above: 64.5
+    above: 65

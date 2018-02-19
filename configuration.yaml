@@ -106,8 +106,6 @@ tts:
 alexa: 
 
 media_player:
-  - platform: roku
-    host: !secret roku_host
   - platform: kodi
     host: !secret kodi_host
     port: !secret kodi_port
@@ -118,8 +116,15 @@ device_tracker:
   - platform: owntracks
     max_gps_accuracy: 200
   - platform: nmap_tracker
-    hosts: 192.168.0.1/24
+    hosts: 192.168.1.100/149
     home_interval: 20
+  - platform: linksys_smart
+    host: 192.168.1.1
+    username: admin
+    password: !secret linksys_password
+    new_device_defaults:
+      track_new_devices: True
+      hide_if_away: False
 
 mqtt:
   broker: !secret mqtt_broker

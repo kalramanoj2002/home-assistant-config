@@ -1,0 +1,18 @@
+sensor.manoj_kumars_ipad_battery_state:
+  platform: ios
+  unique_id: state_snowflake_ipad
+sensor.manoj_kumars_ipad_battery_level:
+  platform: ios
+  unique_id: level_snowflake_ipad
+sensor.ifone_battery_state:
+  platform: ios
+  unique_id: state_ifone
+sensor.usha_battery_level:
+  platform: ios
+  unique_id: level_usha
+sensor.ifone_battery_level:
+  platform: ios
+  unique_id: level_ifone
+sensor.usha_battery_state:
+  platform: ios
+  unique_id: state_usha

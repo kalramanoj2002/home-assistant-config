@@ -41,6 +41,8 @@ case_status:
   name: Case Status
   entities: 
     - sensor.f1
+    - sensor.h1_renew
+    - sensor.h4_renew
 due_dates:
   name: Renew Stuff
   entities: 
@@ -66,6 +68,9 @@ stocks:
     - sensor.GE
     - sensor.UPS
     - sensor.DAL
+    - sensor.bitcoin
+    - sensor.ethereum
+    - sensor.lite_coin
 gdax:
   name: Gdax Prices
   entities:
@@ -75,6 +80,8 @@ gdax:
 transit_time:
   name: Transit Time
   entities:
+    - sensor.114_to_city
+    - sensor.117_to_city
     - sensor.122_to_city_mapple_st
     - sensor.122_to_city_first_st
     - sensor.122_to_city_golden_ave
@@ -124,16 +131,16 @@ pi_hole:
 pi_machine:
   name: Machine
   entities:
-    - sensor.average_load_15m
-    - sensor.average_load_1m
-    - sensor.average_load_5m
-    - sensor.swap_used
+    - sensor.load_15m
+    - sensor.load_1m
+    - sensor.load_5m
+    - sensor.swap_use
     - sensor.swap_free
-    - sensor.swap_used_2
-    - sensor.disk_used_home
-    - sensor.ram_available
+    - sensor.swap_use_percent
+    - sensor.disk_use_percent_home
+    - sensor.memory_free
     - sensor.cpu_speed
-    - sensor.cpu_used
+    - sensor.processor_use
     - sensor.last_boot
     - sensor.since_last_boot
     - sensor.rest_sensor
@@ -141,7 +148,6 @@ pi_machine:
 devices:
   name: Devices
   entities:
-    - device_tracker.00184dffff07
     - device_tracker.4c32759e8f6f
     - device_tracker.a00460973b9a
     - device_tracker.bc773781479b
@@ -158,6 +164,10 @@ devices:
     - device_tracker.7cb0c2dae297
     - device_tracker.64b5c6b69387
     - device_tracker.98e7f4afe766
+    - device_tracker.309c236266a4
+    - device_tracker.5ce0c506482f
+    - device_tracker.hassio
+    - device_tracker.snowkalra
 ios_stats:
   name: Charge Stats
   entities:

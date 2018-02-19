@@ -8,11 +8,11 @@
   id: '1498944471196'
   trigger:
     platform: state
-    entity_id: sensor.122_to_city_mapple_st
+    entity_id: sensor.114_to_city
   condition:
     - condition: time
       after: '07:30:00'
-      before: '08:20:00'
+      before: '08:10:00'
       weekday:
         - mon
         - wed

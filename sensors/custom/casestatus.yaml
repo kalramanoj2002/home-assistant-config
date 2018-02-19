@@ -2,4 +2,14 @@
   name: F1
   case_number: !secret case_number_f1
   scan_interval: 7200
+
+- platform: casestatus
+  name: h1 renew
+  case_number: !secret case_number_h1_renew
+  scan_interval: 7200
+  
+- platform: casestatus
+  name: h4 renew
+  case_number: !secret case_number_h4_renew
+  scan_interval: 7200
   

@@ -1,0 +1,11 @@
+# H4 EAD Status change
+- action:
+    - data_template:
+        message: H4 Renew Status change:- {{states.sensor.h4_renew.attributes.details}}
+      service: notify.notify
+  alias: h4 renew change
+  id: '24989445711'
+  trigger:
+    platform: state
+    entity_id: sensor.h4_renew
+    

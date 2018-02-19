@@ -2,8 +2,24 @@
   api_key: !secret alpha_vantage_api_key
   symbols: 
     - symbol: GOOGL
+      currency: USD
     - symbol: GOOG
+      currency: USD
     - symbol: MSFT
+      currency: USD
     - symbol: GE
+      currency: USD
     - symbol: UPS
+      currency: USD
     - symbol: DAL
+      currency: USD
+  foreign_exchange:
+      - from: BTC
+        to: USD
+        name: Bitcoin
+      - from: ETH
+        to: USD
+        name: Ethereum 
+      - from: LTC
+        to: USD
+        name: Lite Coin 
