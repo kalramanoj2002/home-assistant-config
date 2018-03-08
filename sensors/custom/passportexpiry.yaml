@@ -1,17 +1,17 @@
-- platform: calculateduedays
-  name: Manoj Passport
-  due_date: !secret manoj_passport_due_date
-  renew_days: 365
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Manoj Passport
+#   due_date: !secret manoj_passport_due_date
+#   renew_days: 365
+#   scan_interval: 43200
 
-- platform: calculateduedays
-  name: Usha Passport
-  due_date: !secret usha_passport_due_date
-  renew_days: 365
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Usha Passport
+#   due_date: !secret usha_passport_due_date
+#   renew_days: 365
+#   scan_interval: 43200
 
-- platform: calculateduedays
-  name: Shaurya Passport
-  due_date: !secret shaurya_passport_due_date
-  renew_days: 365
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Shaurya Passport
+#   due_date: !secret shaurya_passport_due_date
+#   renew_days: 365
+#   scan_interval: 43200

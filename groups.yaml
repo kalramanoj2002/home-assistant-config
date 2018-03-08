@@ -35,8 +35,22 @@ due_dates_view:
   view: yes
   entities: 
     - group.due_dates
-
+miner_stats_view:
+  name: Miner Stats
+  view: yes
+  entities: 
+    - group.miner_stats
 # groups
+miner_stats:
+  name: Miner Stats
+  entities:
+    - sensor.miner_balance
+    - sensor.miner_current_hashrate
+    - sensor.miner_average_hashrate
+    - sensor.miner_valid_shares
+    - sensor.miner_invalid_shares
+    - sensor.miner_stale_shares
+    - sensor.miner_active_workers
 case_status:
   name: Case Status
   entities: 
@@ -168,6 +182,11 @@ devices:
     - device_tracker.5ce0c506482f
     - device_tracker.hassio
     - device_tracker.snowkalra
+    - device_tracker.0c821e24f2b54b22b1f6b4a40b89a916
+    - device_tracker.hp98e7f4afe766
+    - device_tracker.mp080jyl
+    - device_tracker.manoj
+    - device_tracker.android
 ios_stats:
   name: Charge Stats
   entities:

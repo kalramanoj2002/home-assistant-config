@@ -1,23 +1,23 @@
-- platform: calculateduedays
-  name: Manoj LIC
-  due_date: !secret manoj_lic_premium_due
-  renew_days: 30
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Manoj LIC
+#   due_date: !secret manoj_lic_premium_due
+#   renew_days: 30
+#   scan_interval: 43200
 
-- platform: calculateduedays
-  name: Manoj Parent LIC
-  due_date: !secret manoj_parent_lic_premium_due
-  renew_days: 30
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Manoj Parent LIC
+#   due_date: !secret manoj_parent_lic_premium_due
+#   renew_days: 30
+#   scan_interval: 43200
 
-- platform: calculateduedays
-  name: Usha LIC
-  due_date: !secret usha_lic_premium_due
-  renew_days: 30
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Usha LIC
+#   due_date: !secret usha_lic_premium_due
+#   renew_days: 30
+#   scan_interval: 43200
 
-- platform: calculateduedays
-  name: Usha SBI
-  due_date: !secret usha_sbi_premium_due
-  renew_days: 30
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Usha SBI
+#   due_date: !secret usha_sbi_premium_due
+#   renew_days: 30
+#   scan_interval: 43200

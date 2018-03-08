@@ -1,8 +1,8 @@
-platform: command_line
-switches:
-  camera:
-    command_on: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh start'
-    command_off: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh stop'
-    command_state: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh status | grep -oP "Active:.{0,7}" | sed "s/^.*: //"'
-    value_template: '{{value == "active"}}'
-    friendly_name: Living room camera
+# platform: command_line
+# switches:
+#   camera:
+#     command_on: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh start'
+#     command_off: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh stop'
+#     command_state: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh status | grep -oP "Active:.{0,7}" | sed "s/^.*: //"'
+#     value_template: '{{value == "active"}}'
+#     friendly_name: Living room camera

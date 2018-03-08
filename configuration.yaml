@@ -1,23 +1,23 @@
 homeassistant:
-  customize:
-    sensor.pihole_ads_blocked_today:
-      friendly_name: Blocked Today
-    sensor.pihole_ads_percentage_blocked_today:
-      friendly_name: Blocked Today (%)
-    sensor.pihole_dns_queries_today:
-      friendly_name: Total DNS Queries Today
-    sensor.pihole_dns_queries_cached:
-      friendly_name: DNS queries cached
-    sensor.pihole_dns_queries_forwarded:
-      friendly_name: DNS queries forwarded
-    sensor.pihole_dns_unique_clients:
-      friendly_name: Unique Clients
-    sensor.pihole_dns_unique_domains:
-      friendly_name: Unique Domains
-    sensor.pihole_domains_blocked:  
-      friendly_name: Domains blocked.
-    script.msg_who_is_home:
-      hidden: true
+  # customize:
+    # sensor.pihole_ads_blocked_today:
+    #   friendly_name: Blocked Today
+    # sensor.pihole_ads_percentage_blocked_today:
+    #   friendly_name: Blocked Today (%)
+    # sensor.pihole_dns_queries_today:
+    #   friendly_name: Total DNS Queries Today
+    # sensor.pihole_dns_queries_cached:
+    #   friendly_name: DNS queries cached
+    # sensor.pihole_dns_queries_forwarded:
+    #   friendly_name: DNS queries forwarded
+    # sensor.pihole_dns_unique_clients:
+    #   friendly_name: Unique Clients
+    # sensor.pihole_dns_unique_domains:
+    #   friendly_name: Unique Domains
+    # sensor.pihole_domains_blocked:  
+    #   friendly_name: Domains blocked.
+    # script.msg_who_is_home:
+    #   hidden: true
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
@@ -152,4 +152,4 @@ automation: !include_dir_merge_list automation
 zone: !include zones.yaml
 camera: !include_dir_merge_list cameras/
 shell_command: !include misc/shell_commands.yaml
-switch: !include_dir_list switches/
+switch: !include_dir_merge_list switches/

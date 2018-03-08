@@ -1,5 +1,5 @@
-- platform: calculateduedays
-  name: Manoj I797
-  due_date: !secret manoj_visa_due_date
-  renew_days: 180
-  scan_interval: 43200
+# - platform: calculateduedays
+#   name: Manoj I797
+#   due_date: !secret manoj_visa_due_date
+#   renew_days: 180
+#   scan_interval: 43200
