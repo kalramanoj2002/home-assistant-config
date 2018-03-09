@@ -1,15 +1,17 @@
-- platform: rest
+- platform: command_line
   name: ETH Price
-  resource: https://api.gdax.com/products/ETH-USD/ticker
-  value_template: '{{ value_json.ask }}'
+  command: curl -X GET https://api.gdax.com/products/ETH-USD/ticker
+  value_template: '{{ value_json.price | float }}'
   unit_of_measurement: USD
 
-# - platform: rest
-#   name: BTC Price
-#   resource: https://api.gdax.com/products/btc-usd/ticker
-#   value_template: '{{ value_json.price }}'
+- platform: command_line
+  name: BTC Price
+  command: curl -X GET https://api.gdax.com/products/btc-USD/ticker
+  value_template: '{{ value_json.price | float }}'
+  unit_of_measurement: USD
 
-# - platform: rest
-#   name: LTC Price
-#   resource: https://api.gdax.com/products/ltc-usd/ticker
-#   value_template: '{{ value_json.price }}'
+- platform: command_line
+  name: LTC Price
+  command: curl -X GET https://api.gdax.com/products/ltc-USD/ticker
+  value_template: '{{ value_json.price | float }}'
+  unit_of_measurement: USD

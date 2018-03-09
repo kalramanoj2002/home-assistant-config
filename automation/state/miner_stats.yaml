@@ -1,0 +1,10 @@
+- action:
+    - data_template:
+        message: current hashrate is {{states.sensor.miner_current_hashrate.state}}
+      service: notify.notify
+  alias: current_hashrate
+  id: '249894447901'
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.miner_current_hashrate
+    below: 50
