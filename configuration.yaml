@@ -147,6 +147,7 @@ intent_script:
       data_template:
         message: Hello from an intent!
 
+input_number: !include_dir_merge_named input_numbers 
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
 zone: !include zones.yaml

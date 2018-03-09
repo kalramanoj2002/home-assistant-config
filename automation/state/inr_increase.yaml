@@ -6,6 +6,6 @@
   alias: USD to INR
   id: '249894447'
   trigger:
-    platform: numeric_state
-    entity_id: sensor.inr
-    above: 65
+    platform: template
+    value_template: "{{ states.sensor.inr.state | float > states.input_number.usd_to_inr.state | float}}"
+    
