@@ -39,6 +39,7 @@ miner_stats_view:
   name: Miner Stats
   view: yes
   entities: 
+    - group.miner_stats_local
     - group.miner_stats
 # groups
 miner_stats:
@@ -51,6 +52,24 @@ miner_stats:
     - sensor.miner_invalid_shares
     - sensor.miner_stale_shares
     - sensor.miner_active_workers
+miner_stats_local:
+  name: Miner Stats local
+  entities:
+    - sensor.miner_online_local
+    - sensor.current_hashrate_local
+    - sensor.current_valid_shares_local
+    - sensor.current_invalid_shares_local
+    - sensor.gpu0_hashrate_local
+    - sensor.gpu0_temp_local
+    - sensor.gpu0_fan_local
+    - sensor.gpu1_hashrate_local
+    - sensor.gpu1_temp_local
+    - sensor.gpu1_fan_local
+    - sensor.gpu2_hashrate_local
+    - sensor.gpu2_temp_local
+    - sensor.gpu2_fan_local
+    - sensor.current_mining_pool
+    - sensor.miner_stats_local
 case_status:
   name: Case Status
   entities: 

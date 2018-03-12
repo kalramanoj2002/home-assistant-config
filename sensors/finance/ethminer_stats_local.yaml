@@ -1,0 +1,63 @@
+- platform: command_line
+  name: Miner Stats Local
+  command: !secret miner_local_command  
+  value_template: '{{ value_json.result }}'
+
+- platform: template
+  sensors:
+    miner_online_local:
+      friendly_name: 'Online'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[1] | replace(\"'\", \"\") }}"
+      unit_of_measurement: min
+    current_hashrate_local:
+      friendly_name: 'Current Hashrate'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[2].split(';')[0] | replace(\"'\", \"\") | multiply(0.001) | round(1)}}"
+      unit_of_measurement: mh
+    current_valid_shares_local:
+      friendly_name: 'Valid Shares'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[2].split(';')[1] | replace(\"'\", \"\")}}"
+      unit_of_measurement: int
+    current_invalid_shares_local:
+      friendly_name: 'Invalid Shares'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[2].split(';')[2] | replace(\"'\", \"\")}}"
+      unit_of_measurement: int
+    gpu0_hashrate_local:
+      friendly_name: 'GPU 0 Hashrate'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[3].split(';')[0] | replace(\"'\", \"\") | multiply(0.001) | round(1)}}"
+      unit_of_measurement: mh
+    gpu1_hashrate_local:
+      friendly_name: 'GPU 1 Hashrate'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[3].split(';')[1] | replace(\"'\", \"\") | multiply(0.001) | round(1)}}"
+      unit_of_measurement: mh
+    gpu2_hashrate_local:
+      friendly_name: 'GPU 2 Hashrate'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[3].split(';')[2] | replace(\"'\", \"\") | multiply(0.001) | round(1)}}"
+    gpu0_temp_local:
+      friendly_name: 'GPU 0 temp'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[0] | replace(\"'\", \"\")}}"
+      unit_of_measurement: "°C"
+    gpu0_fan_local:
+      friendly_name: 'GPU 0 fan speed'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[1] | replace(\"'\", \"\")}}"
+      unit_of_measurement: "%"
+    gpu1_temp_local:
+      friendly_name: 'GPU 1 temp'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[2] | replace(\"'\", \"\")}}"
+      unit_of_measurement: "°C"
+    gpu1_fan_local:
+      friendly_name: 'GPU 1 fan speed'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[3] | replace(\"'\", \"\")}}"
+      unit_of_measurement: "%"
+    gpu2_temp_local:
+      friendly_name: 'GPU 2 temp'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[4] | replace(\"'\", \"\")}}"
+      unit_of_measurement: "°C"
+    gpu2_fan_local:
+      friendly_name: 'GPU 2 fan speed'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[5] | replace(\"'\", \"\")}}"
+      unit_of_measurement: "%"
+    current_mining_pool:
+      friendly_name: 'current mining pool'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[7]| replace(\"'\", \"\")}}"
+      unit_of_measurement: ""
+  

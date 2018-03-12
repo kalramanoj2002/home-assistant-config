@@ -148,6 +148,7 @@ intent_script:
         message: Hello from an intent!
 
 input_number: !include_dir_merge_named input_numbers 
+# panel_iframe: !include_dir_merge_named panel_iframe 
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
 zone: !include zones.yaml

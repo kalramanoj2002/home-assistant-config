@@ -5,6 +5,9 @@
   alias: Current Hashrate
   id: '249894447901'
   trigger:
-    platform: numeric_state
-    entity_id: sensor.miner_current_hashrate
-    below: 50
+    - platform: numeric_state
+      entity_id: sensor.miner_stats_local
+      below: 50
+    - platform: state
+      entity_id: sensor.miner_stats_local
+      to: None
