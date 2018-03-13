@@ -1,8 +1,8 @@
 - platform: command_line
   name: Miner Stats Local
-  command: !secret miner_local_command  
+  command: !secret miner_getstat1  
   value_template: '{{ value_json.result }}'
-
+  
 - platform: template
   sensors:
     miner_online_local:
@@ -35,7 +35,7 @@
     gpu0_temp_local:
       friendly_name: 'GPU 0 temp'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[0] | replace(\"'\", \"\")}}"
-      unit_of_measurement: "°C"
+      unit_of_measurement: "C"
     gpu0_fan_local:
       friendly_name: 'GPU 0 fan speed'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[1] | replace(\"'\", \"\")}}"
@@ -43,7 +43,7 @@
     gpu1_temp_local:
       friendly_name: 'GPU 1 temp'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[2] | replace(\"'\", \"\")}}"
-      unit_of_measurement: "°C"
+      unit_of_measurement: "C"
     gpu1_fan_local:
       friendly_name: 'GPU 1 fan speed'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[3] | replace(\"'\", \"\")}}"
@@ -51,7 +51,7 @@
     gpu2_temp_local:
       friendly_name: 'GPU 2 temp'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[4] | replace(\"'\", \"\")}}"
-      unit_of_measurement: "°C"
+      unit_of_measurement: "C"
     gpu2_fan_local:
       friendly_name: 'GPU 2 fan speed'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[5] | replace(\"'\", \"\")}}"

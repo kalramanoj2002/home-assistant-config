@@ -1,7 +1,11 @@
 homeassistant:
   # customize:
-    # sensor.pihole_ads_blocked_today:
-    #   friendly_name: Blocked Today
+  #   sensor.gpu0_temp_local:
+  #     unit_of_measurement: "C"
+  #   sensor.gpu1_temp_local:
+  #     unit_of_measurement: "C"
+  #   sensor.gpu2_temp_local:
+  #     unit_of_measurement: "C"
     # sensor.pihole_ads_percentage_blocked_today:
     #   friendly_name: Blocked Today (%)
     # sensor.pihole_dns_queries_today:

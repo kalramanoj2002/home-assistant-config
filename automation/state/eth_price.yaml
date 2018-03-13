@@ -7,7 +7,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.eth_price
-      below: 500
+      below: 600
     - platform: numeric_state
       entity_id: sensor.eth_price
       above: 900

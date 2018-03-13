@@ -206,6 +206,7 @@ devices:
     - device_tracker.mp080jyl
     - device_tracker.manoj
     - device_tracker.android
+    - device_tracker.537812471784b4346ecfd9e45a9ac8c8
 ios_stats:
   name: Charge Stats
   entities:
