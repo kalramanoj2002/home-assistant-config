@@ -2,10 +2,18 @@
     - data_template:
         message: Eth Price is {{states.sensor.eth_price.state}}
       service: notify.notify
-  alias: ETH Price
+  alias: ETH Price going down
+  id: '2498944479021'
+  trigger:
+    - platform: template
+      value_template: "{{ states.sensor.eth_price.state | float < 600 }}"
+
+- action:
+    - data_template:
+        message: Eth Price is {{states.sensor.eth_price.state}}
+      service: notify.notify
+  alias: ETH Price going up
   id: '249894447902'
   trigger:
     - platform: template
-      value_template: "{% if states.sensor.eth_price.state | float < 600 %} true {% endif %}"
-    - platform: template
-      value_template: "{% if states.sensor.eth_price.state | float > 900 %} true {% endif %}"
+      value_template: "{{ states.sensor.eth_price.state | float > 900 }}"

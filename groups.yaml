@@ -46,7 +46,7 @@ miner_stats:
   name: Miner Stats
   entities:
     - sensor.miner_balance
-    - sensor.miner_current_hashrate
+    - sensor.miner_hashrate
     - sensor.miner_average_hashrate
     - sensor.miner_valid_shares
     - sensor.miner_invalid_shares
@@ -55,10 +55,12 @@ miner_stats:
 miner_stats_local:
   name: Miner Stats local
   entities:
+    - sensor.miner_online_time
     - sensor.miner_online_local
-    - sensor.current_hashrate_local
-    - sensor.current_valid_shares_local
-    - sensor.current_invalid_shares_local
+    - sensor.hashrate_local
+    - sensor.valid_shares_local
+    - sensor.invalid_shares_local
+    - sensor.rejected_shares_local
     - sensor.gpu0_hashrate_local
     - sensor.gpu0_temp_local
     - sensor.gpu0_fan_local
@@ -68,7 +70,7 @@ miner_stats_local:
     - sensor.gpu2_hashrate_local
     - sensor.gpu2_temp_local
     - sensor.gpu2_fan_local
-    - sensor.current_mining_pool
+    - sensor.mining_pool
     - sensor.miner_stats_local
 case_status:
   name: Case Status

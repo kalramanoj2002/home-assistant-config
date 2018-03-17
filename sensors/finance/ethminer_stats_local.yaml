@@ -5,20 +5,32 @@
   
 - platform: template
   sensors:
+    miner_online_time:
+      friendly_name: 'Online Since'
+      value_template: >- 
+        {%  set miner_online_min = states.sensor.miner_online_local.state | int %}
+        {% if (miner_online_min // 3600 > 0) -%}
+          {{ miner_online_min // 3600 }} day
+        {%- endif %}
+        {% if (miner_online_min // 60 > 0) -%}
+          {{ miner_online_min // 60 }} hours
+        {%- endif %}
+        {{ miner_online_min % 60 }} min
+      unit_of_measurement: ""
     miner_online_local:
       friendly_name: 'Online'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[1] | replace(\"'\", \"\") }}"
       unit_of_measurement: min
-    current_hashrate_local:
+    hashrate_local:
       friendly_name: 'Current Hashrate'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[2].split(';')[0] | replace(\"'\", \"\") | multiply(0.001) | round(1)}}"
       unit_of_measurement: mh
-    current_valid_shares_local:
+    valid_shares_local:
       friendly_name: 'Valid Shares'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[2].split(';')[1] | replace(\"'\", \"\")}}"
       unit_of_measurement: int
-    current_invalid_shares_local:
-      friendly_name: 'Invalid Shares'
+    rejected_shares_local:
+      friendly_name: 'Rejected Shares'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[2].split(';')[2] | replace(\"'\", \"\")}}"
       unit_of_measurement: int
     gpu0_hashrate_local:
@@ -32,6 +44,7 @@
     gpu2_hashrate_local:
       friendly_name: 'GPU 2 Hashrate'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[3].split(';')[2] | replace(\"'\", \"\") | multiply(0.001) | round(1)}}"
+      unit_of_measurement: mh
     gpu0_temp_local:
       friendly_name: 'GPU 0 temp'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[0] | replace(\"'\", \"\")}}"
@@ -56,8 +69,16 @@
       friendly_name: 'GPU 2 fan speed'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[6].split(';')[5] | replace(\"'\", \"\")}}"
       unit_of_measurement: "%"
-    current_mining_pool:
+    mining_pool:
       friendly_name: 'current mining pool'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[7]| replace(\"'\", \"\")}}"
       unit_of_measurement: ""
+    invalid_shares_local:
+      friendly_name: 'Invalid Shares'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[8].split(';')[0]| replace(\"'\", \"\")}}"
+      unit_of_measurement: int
+    pool_switches:
+      friendly_name: 'In valid Shares'
+      value_template: "{{ states.sensor.miner_stats_local.state.split(',')[8].split(';')[1]| replace(\"'\", \"\")}}"
+      unit_of_measurement: int
   

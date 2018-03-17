@@ -3,15 +3,18 @@
   command: curl -X GET https://api.gdax.com/products/ETH-USD/ticker
   value_template: '{{ value_json.price | float }}'
   unit_of_measurement: USD
+  scan_interval: 30
 
 - platform: command_line
   name: BTC Price
   command: curl -X GET https://api.gdax.com/products/btc-USD/ticker
   value_template: '{{ value_json.price | float }}'
   unit_of_measurement: USD
+  scan_interval: 30
 
 - platform: command_line
   name: LTC Price
   command: curl -X GET https://api.gdax.com/products/ltc-USD/ticker
   value_template: '{{ value_json.price | float }}'
   unit_of_measurement: USD
+  scan_interval: 30
