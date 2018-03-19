@@ -46,7 +46,7 @@ miner_stats:
   name: Miner Stats
   entities:
     - sensor.miner_balance
-    - sensor.miner_hashrate
+    - sensor.miner_current_hashrate
     - sensor.miner_average_hashrate
     - sensor.miner_valid_shares
     - sensor.miner_invalid_shares
@@ -61,6 +61,7 @@ miner_stats_local:
     - sensor.valid_shares_local
     - sensor.invalid_shares_local
     - sensor.rejected_shares_local
+    - sensor.pool_switches
     - sensor.gpu0_hashrate_local
     - sensor.gpu0_temp_local
     - sensor.gpu0_fan_local
@@ -209,6 +210,7 @@ devices:
     - device_tracker.manoj
     - device_tracker.android
     - device_tracker.537812471784b4346ecfd9e45a9ac8c8
+    - device_tracker.RETROPIE
 ios_stats:
   name: Charge Stats
   entities:

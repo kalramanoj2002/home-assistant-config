@@ -78,7 +78,7 @@
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[8].split(';')[0]| replace(\"'\", \"\")}}"
       unit_of_measurement: int
     pool_switches:
-      friendly_name: 'In valid Shares'
+      friendly_name: 'Pool Switches'
       value_template: "{{ states.sensor.miner_stats_local.state.split(',')[8].split(';')[1]| replace(\"'\", \"\")}}"
       unit_of_measurement: int
   

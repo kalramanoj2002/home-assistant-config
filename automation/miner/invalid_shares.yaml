@@ -1,0 +1,11 @@
+- action:
+    - data_template:
+        message: Invalid Shares gone up to {{states.sensor.invalid_shares_local.state}}
+      service: notify.notify
+    - service: shell_command.restart_miner
+  alias: Invalid Shares restart
+  id: '2498944479031'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.invalid_shares_local
+      above: 25
