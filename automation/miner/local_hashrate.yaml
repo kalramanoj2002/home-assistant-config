@@ -1,0 +1,16 @@
+- action:
+    - data_template:
+        message: Invesitage Hash rates ":" {{states.sensor.gpu0_hashrate_local.state}}, GPU 1 ":" {{states.sensor.gpu1_hashrate_local.state}}, GPU 2 ":" {{states.sensor.gpu2_hashrate_local.state}}
+      service: notify.notify
+  alias: Local hashrate
+  id: '24989444790312'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.gpu0_hashrate_local
+      below: 30
+    - platform: numeric_state
+      entity_id: sensor.gpu1_hashrate_local
+      below: 25
+    - platform: numeric_state
+      entity_id: sensor.gpu2_hashrate_local
+      below: 25

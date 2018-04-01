@@ -7,10 +7,10 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.invalid_shares_local
-      above: 10
+      above: 8
 - action:
     - data_template:
-        message: Invalid Shares gone up to {{states.sensor.invalid_shares_local.state}}
+        message: Invalid Shares gone up to {{states.sensor.invalid_shares_local.state}}... restarting.
       service: notify.notify
     - service: shell_command.restart_miner
   alias: Invalid Shares restart
@@ -18,4 +18,4 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.invalid_shares_local
-      above: 20
+      above: 12

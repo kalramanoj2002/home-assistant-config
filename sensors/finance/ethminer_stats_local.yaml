@@ -9,11 +9,13 @@
       friendly_name: 'Online Since'
       value_template: >- 
         {%  set miner_online_min = states.sensor.miner_online_local.state | int %}
-        {% if (miner_online_min // 3600 > 0) -%}
-          {{ miner_online_min // 3600 }} day
-        {%- endif %}
+        {% if (miner_online_min // 1440 > 0) -%}
+          {{ miner_online_min // 1440 }} day
+          {{ miner_online_min % 1440 // 60}} hours
+        {%- else %}
         {% if (miner_online_min // 60 > 0) -%}
           {{ miner_online_min // 60 }} hours
+        {%- endif %}
         {%- endif %}
         {{ miner_online_min % 60 }} min
       unit_of_measurement: ""
