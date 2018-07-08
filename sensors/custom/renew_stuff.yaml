@@ -1,0 +1,3 @@
+- platform: renew_stuff
+  url: !secret renew_stuff_url
+  scan_interval: 7200

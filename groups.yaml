@@ -73,27 +73,17 @@ miner_stats_local:
     - sensor.gpu2_fan_local
     - sensor.mining_pool
     - sensor.miner_stats_local
-case_status:
-  name: Case Status
-  entities: 
-    - sensor.f1
-    - sensor.h1_renew
-    - sensor.h4_renew
+# case_status:
+#   name: Case Status
+#   entities: 
+#     - sensor.f1
+#     - sensor.h1_renew
+#     - sensor.h4_renew
 due_dates:
   name: Renew Stuff
   entities: 
-    - sensor.manoj_passport
-    - sensor.usha_passport
-    - sensor.shaurya_passport
-    - sensor.manoj_I797
-    - sensor.manoj_dl
-    - sensor.usha_dl
-    - sensor.honda_vehicle_reg
-    - sensor.progressive_insurance
-    - sensor.manoj_lic
-    - sensor.manoj_parent_lic
-    - sensor.usha_lic
-    - sensor.usha_sbi
+    - sensor.renew_manoj_passport
+    - sensor.renew_citi_credit_card_0_interest
 stocks:
   name: Stocks
   entities:
