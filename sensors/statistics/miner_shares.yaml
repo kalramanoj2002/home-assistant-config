@@ -1,5 +1,5 @@
 - platform: statistics
   name: Local shares (60 min)
-  entity_id: sensor.current_valid_shares_local
+  entity_id: sensor.valid_shares_local
   max_age:
     minutes: 60

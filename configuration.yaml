@@ -14,6 +14,22 @@ homeassistant:
       friendly_name: Unique Domains
     sensor.pihole_domains_blocked:  
       friendly_name: Domains blocked.
+    sensor.renew_manoj_passport:
+      friendly_name: Manoj Passport
+    sensor.renew_citi_credit_card_0_interest:
+      friendly_name: Citi Credit Card
+    sensor.renew_car_insurance:
+      friendly_name: Car Insurance
+    sensor.renew_manoj_lic_policy:
+      friendly_name: Manoj LIC Policy
+    sensor.renew_manoj_lic_policy_parent:
+      friendly_name: Manoj Parent's LIC Policy
+    sensor.renew_usha_lic_policy:
+      friendly_name: Usha LIC Policy
+    sensor.renew_manoj_driving_license:
+      friendly_name: Manoj Driving License
+    sensor.renew_usha_driving_license:
+      friendly_name: Usha Driving License
     script.msg_who_is_home:
       hidden: true
   # Name of the location where Home Assistant is running

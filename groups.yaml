@@ -84,6 +84,12 @@ due_dates:
   entities: 
     - sensor.renew_manoj_passport
     - sensor.renew_citi_credit_card_0_interest
+    - sensor.renew_car_insurance
+    - sensor.renew_manoj_lic_policy
+    - sensor.renew_manoj_lic_policy_parent
+    - sensor.renew_usha_lic_policy
+    - sensor.renew_manoj_driving_license
+    - sensor.renew_usha_driving_license
 stocks:
   name: Stocks
   entities:
@@ -201,6 +207,7 @@ devices:
     - device_tracker.android
     - device_tracker.537812471784b4346ecfd9e45a9ac8c8
     - device_tracker.RETROPIE
+    - device_tracker.xboxone
 ios_stats:
   name: Charge Stats
   entities:
