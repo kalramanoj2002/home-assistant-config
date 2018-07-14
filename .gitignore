@@ -10,7 +10,6 @@ __pycache__/
 *.key
 *.conf
 *.json
-*.py
 *.db-shm
 *.db-wal
 *.html
@@ -29,3 +28,4 @@ ip_bans.yaml
 !/.gitignore
 config
 ozw_config
+python_scripts/*

@@ -2,7 +2,7 @@
   name: Miner Stats Local
   command: !secret miner_getstat1  
   value_template: '{{ value_json.result }}'
-  unit_of_measurement: ""
+  unit_of_measurement: ''
   
 - platform: template
   sensors:
