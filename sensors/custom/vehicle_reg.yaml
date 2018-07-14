@@ -1,5 +1,0 @@
-# - platform: calculateduedays
-#   name: Honda Vehicle Reg
-#   due_date: !secret vehicle_reg_due_date
-#   renew_days: 30
-#   scan_interval: 43200
