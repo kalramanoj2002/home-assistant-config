@@ -2,7 +2,7 @@
   name: INR
   resource: https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=usd&to_currency=inr&apikey=!secret alpha_vantage_api_key
   value_template: '{{ value_json["Realtime Currency Exchange Rate"]["5. Exchange Rate"] | float}}'
-  unit_of_measurement: USD
+  unit_of_measurement: INR
   scan_interval: 1800
   
   

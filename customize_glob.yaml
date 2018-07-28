@@ -1,0 +1,21 @@
+"sensor.*_to_*":
+  icon: mdi:timer-sand
+"sensor.*hashrate*":
+  icon: mdi:alpha
+"sensor.*hashrate":
+  icon: mdi:alpha
+"sensor.*fan*":
+  icon: mdi:fan
+"sensor.*temp*":
+  icon: mdi:thermometer
+"sensor.renew_*":
+  icon: mdi:calendar-blank
+"sensor.miner_balance":
+  icon: mdi:bank
+"sensor.invalid_shares*":
+  icon: emoticon-poop
+"sensor.valid_shares*":
+  icon: diamond
+"sensor.*_price":
+  icon: mdi:trending-up
+  
