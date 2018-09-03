@@ -63,13 +63,13 @@ miner_stats_local:
     - sensor.rejected_shares_local
     - sensor.pool_switches
     - sensor.gpu0_hashrate_local
-    - sensor.gpu0_temp_local
-    - sensor.gpu0_fan_local
     - sensor.gpu1_hashrate_local
-    - sensor.gpu1_temp_local
-    - sensor.gpu1_fan_local
     - sensor.gpu2_hashrate_local
+    - sensor.gpu0_temp_local
+    - sensor.gpu1_temp_local
     - sensor.gpu2_temp_local
+    - sensor.gpu0_fan_local
+    - sensor.gpu1_fan_local
     - sensor.gpu2_fan_local
     - sensor.mining_pool
     - sensor.miner_stats_local

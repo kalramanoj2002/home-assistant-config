@@ -146,6 +146,7 @@ views:
           - device_tracker.android
           - device_tracker.537812471784b4346ecfd9e45a9ac8c8
           - device_tracker.retropie
+          - device_tracker.xboxone
       - type: entities
         title: Charge Stats
         show_header_toggle: true
@@ -215,6 +216,8 @@ views:
           - device_tracker.537812471784b4346ecfd9e45a9ac8c8
           - device_tracker.mp080jyl
           - device_tracker.retropie
+          - device_tracker.pgahlawesiphone
+          - device_tracker.xboxone
       - type: media-control
         entity: media_player.kodi
       - type: media-control
@@ -293,6 +296,7 @@ views:
           - device_tracker.android
           - device_tracker.537812471784b4346ecfd9e45a9ac8c8
           - device_tracker.retropie
+          - device_tracker.xboxone
   - title: Charge Stats
     cards:
       - type: entities
