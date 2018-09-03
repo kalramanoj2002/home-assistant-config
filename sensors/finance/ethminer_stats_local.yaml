@@ -4,7 +4,7 @@
   value_template: '{{ value_json["result"][1]}}'
   json_attributes: 
     - result
-  unit_of_measurement: ''
+  unit_of_measurement: 'min'
   
 - platform: template
   sensors:
