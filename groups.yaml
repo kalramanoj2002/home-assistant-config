@@ -90,6 +90,8 @@ due_dates:
     - sensor.renew_usha_lic_policy
     - sensor.renew_manoj_driving_license
     - sensor.renew_usha_driving_license
+    - sensor.renew_house_insurance
+    - sensor.renew_springfield_house
 stocks:
   name: Stocks
   entities:
@@ -113,7 +115,9 @@ transit_time:
   name: Transit Time
   entities:
     - sensor.114_to_city
+    - sensor.114X_to_city
     - sensor.117_to_city
+    - sensor.114local_to_city
     - sensor.122_to_city_mapple_st
     - sensor.122_to_city_first_st
     - sensor.122_to_city_golden_ave
@@ -176,7 +180,7 @@ pi_machine:
     - sensor.last_boot
     - sensor.since_last_boot
     - sensor.rest_sensor
-    - sensor.myipopendnscom
+    - sensor.myip
 devices:
   name: Devices
   entities:

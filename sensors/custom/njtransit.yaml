@@ -1,5 +1,5 @@
 - platform: njtransit
-  name: 114 to city
+  name: 114X to city
   route: 114
   direction: New%20York
   stop_id: 29653
@@ -9,6 +9,12 @@
   route: 117
   direction: New%20York
   stop_id: 29653
+
+- platform: njtransit
+  name: 114-local to city
+  route: 114
+  direction: New%20York
+  stop_id: 31398
 
 # - platform: njtransit
 #   name: 190 to city
