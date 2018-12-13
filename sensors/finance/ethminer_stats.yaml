@@ -1,35 +1,35 @@
-- platform: rest
-  name: Miner Balance
-  resource: !secret eth_address
-  value_template: '{{ value_json["data"]["unpaid"] | multiply(0.000000000000000001) | round(6)}}'
-  unit_of_measurement: mh
-  json_attributes: 
-    - data
+# - platform: rest
+#   name: Miner Balance
+#   resource: !secret eth_address
+#   value_template: '{{ value_json["data"]["unpaid"] | multiply(0.000000000000000001) | round(6)}}'
+#   unit_of_measurement: mh
+#   json_attributes: 
+#     - data
 
-- platform: template
-  sensors:
-    miner_current_hashrate:
-      friendly_name: 'Current Hashrate'
-      value_template: '{{ states.sensor.miner_balance.attributes["data"]["currentHashrate"] | multiply(0.000001) | round(1)}}'
-      unit_of_measurement: mh
-    miner_average_hashrate:
-      friendly_name: 'Average Hashrate'
-      value_template: '{{ states.sensor.miner_balance.attributes["data"]["averageHashrate"] | multiply(0.000001) | round(1)}}'
-      unit_of_measurement: mh
-    miner_valid_shares:
-      friendly_name: 'Valid Shares'
-      value_template: '{{ states.sensor.miner_balance.attributes["data"]["validShares"] }}'
-      unit_of_measurement: int
-    miner_invalid_shares:
-      friendly_name: 'Invalid Shares'
-      value_template: '{{ states.sensor.miner_balance.attributes["data"]["invalidShares"] }}'
-      unit_of_measurement: int
-    miner_stale_shares:
-      friendly_name: 'Stale Shares'
-      value_template: '{{ states.sensor.miner_balance.attributes["data"]["staleShares"] }}'
-      unit_of_measurement: int
-    miner_active_workers:
-      friendly_name: 'Active Workers'
-      value_template: '{{ states.sensor.miner_balance.attributes["data"]["activeWorkers"] }}'
-      unit_of_measurement: int
+# - platform: template
+#   sensors:
+#     miner_current_hashrate:
+#       friendly_name: 'Current Hashrate'
+#       value_template: '{{ states.sensor.miner_balance.attributes["data"]["currentHashrate"] | multiply(0.000001) | round(1)}}'
+#       unit_of_measurement: mh
+#     miner_average_hashrate:
+#       friendly_name: 'Average Hashrate'
+#       value_template: '{{ states.sensor.miner_balance.attributes["data"]["averageHashrate"] | multiply(0.000001) | round(1)}}'
+#       unit_of_measurement: mh
+#     miner_valid_shares:
+#       friendly_name: 'Valid Shares'
+#       value_template: '{{ states.sensor.miner_balance.attributes["data"]["validShares"] }}'
+#       unit_of_measurement: int
+#     miner_invalid_shares:
+#       friendly_name: 'Invalid Shares'
+#       value_template: '{{ states.sensor.miner_balance.attributes["data"]["invalidShares"] }}'
+#       unit_of_measurement: int
+#     miner_stale_shares:
+#       friendly_name: 'Stale Shares'
+#       value_template: '{{ states.sensor.miner_balance.attributes["data"]["staleShares"] }}'
+#       unit_of_measurement: int
+#     miner_active_workers:
+#       friendly_name: 'Active Workers'
+#       value_template: '{{ states.sensor.miner_balance.attributes["data"]["activeWorkers"] }}'
+#       unit_of_measurement: int
   

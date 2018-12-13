@@ -137,10 +137,16 @@ media_player:
   - platform: spotify
     client_id: !secret spotify_client_id
     client_secret: !secret spotify_client_secret
+
+  - platform: samsungtv
+    host: !secret samsungtv_host
+    name: Samsung TV
+    mac: 70:2A:D5:4A:98:76
     
+owntracks:
+  max_gps_accuracy: 200
+
 device_tracker:
-  - platform: owntracks
-    max_gps_accuracy: 200
   - platform: nmap_tracker
     hosts: 192.168.1.100/149
     home_interval: 20

@@ -13,39 +13,6 @@ views:
         show_info: true
         tap_action: dialog
       - type: entities
-        title: Miner Stats
-        show_header_toggle: true
-        entities:
-          - sensor.miner_balance
-          - sensor.miner_current_hashrate
-          - sensor.miner_average_hashrate
-          - sensor.miner_valid_shares
-          - sensor.miner_invalid_shares
-          - sensor.miner_stale_shares
-          - sensor.miner_active_workers
-      - type: entities
-        title: Miner Stats local
-        show_header_toggle: true
-        entities:
-          - sensor.miner_online_time
-          - sensor.miner_online_local
-          - sensor.hashrate_local
-          - sensor.valid_shares_local
-          - sensor.invalid_shares_local
-          - sensor.rejected_shares_local
-          - sensor.pool_switches
-          - sensor.gpu0_hashrate_local
-          - sensor.gpu0_temp_local
-          - sensor.gpu0_fan_local
-          - sensor.gpu1_hashrate_local
-          - sensor.gpu1_temp_local
-          - sensor.gpu1_fan_local
-          - sensor.gpu2_hashrate_local
-          - sensor.gpu2_temp_local
-          - sensor.gpu2_fan_local
-          - sensor.mining_pool
-          - sensor.miner_stats_local
-      - type: entities
         title: Renew Stuff
         show_header_toggle: true
         entities:
@@ -57,6 +24,8 @@ views:
           - sensor.renew_usha_lic_policy
           - sensor.renew_manoj_driving_license
           - sensor.renew_usha_driving_license
+          - sensor.renew_house_insurance
+          - sensor.renew_springfield_house
       - type: entities
         title: Stocks
         show_header_toggle: true
@@ -73,8 +42,9 @@ views:
         title: Transit Time
         show_header_toggle: true
         entities:
-          - sensor.114_to_city
+          - sensor.114x_to_city
           - sensor.117_to_city
+          - sensor.114local_to_city
           - sensor.home_to_port_autority_car
           - sensor.port_autority_to_home_car
       - type: entities
@@ -106,11 +76,6 @@ views:
           - sensor.owm_snow
           - sensor.owm_temperature
       - type: entities
-        title: Ad Blocker
-        show_header_toggle: true
-        entities:
-          - sensor.pihole_ads_blocked_today
-      - type: entities
         title: Machine
         show_header_toggle: true
         entities:
@@ -126,7 +91,7 @@ views:
           - sensor.last_boot
           - sensor.since_last_boot
           - sensor.rest_sensor
-          - sensor.myipopendnscom
+          - sensor.myip
       - type: entities
         title: Devices
         show_header_toggle: true
@@ -147,6 +112,9 @@ views:
           - device_tracker.537812471784b4346ecfd9e45a9ac8c8
           - device_tracker.retropie
           - device_tracker.xboxone
+          - device_tracker.5d0ff49eaec54453a1d0219905fbca54
+          - device_tracker.nintendo3ds
+          - device_tracker.living_room_speaker
       - type: entities
         title: Charge Stats
         show_header_toggle: true
@@ -182,19 +150,6 @@ views:
           - automation.h1_renew_staus_change
           - automation.h4_renew_change
       - type: entities
-        title: calendar
-        show_header_toggle: true
-        entities:
-          - calendar.all_projects
-          - calendar.due_this_week
-          - calendar.due_today
-          - calendar.inbox
-      - type: entities
-        title: all switches
-        show_header_toggle: true
-        entities:
-          - switch.desktop
-      - type: entities
         title: all devices
         show_header_toggle: true
         entities:
@@ -216,8 +171,19 @@ views:
           - device_tracker.537812471784b4346ecfd9e45a9ac8c8
           - device_tracker.mp080jyl
           - device_tracker.retropie
-          - device_tracker.pgahlawesiphone
           - device_tracker.xboxone
+          - device_tracker.nintendo3ds
+          - device_tracker.living_room_speaker
+          - device_tracker.5d0ff49eaec54453a1d0219905fbca54
+      - type: entities
+        title: all switches
+        show_header_toggle: true
+        entities:
+          - switch.desktop
+      - type: media-control
+        entity: media_player.samsung_tv
+      - type: media-control
+        entity: media_player.spotify
       - type: media-control
         entity: media_player.kodi
       - type: media-control
@@ -250,12 +216,7 @@ views:
           - sensor.owm_snow
           - sensor.owm_temperature
   - title: Ad Blocker
-    cards:
-      - type: entities
-        title: Ad Blocker
-        show_header_toggle: true
-        entities:
-          - sensor.pihole_ads_blocked_today
+    cards: []
   - title: PI machine
     cards:
       - type: entities
@@ -274,7 +235,7 @@ views:
           - sensor.last_boot
           - sensor.since_last_boot
           - sensor.rest_sensor
-          - sensor.myipopendnscom
+          - sensor.myip
   - title: Devices
     cards:
       - type: entities
@@ -297,6 +258,9 @@ views:
           - device_tracker.537812471784b4346ecfd9e45a9ac8c8
           - device_tracker.retropie
           - device_tracker.xboxone
+          - device_tracker.5d0ff49eaec54453a1d0219905fbca54
+          - device_tracker.nintendo3ds
+          - device_tracker.living_room_speaker
   - title: Charge Stats
     cards:
       - type: entities
@@ -333,38 +297,7 @@ views:
           - sensor.renew_usha_lic_policy
           - sensor.renew_manoj_driving_license
           - sensor.renew_usha_driving_license
+          - sensor.renew_house_insurance
+          - sensor.renew_springfield_house
   - title: Miner Stats
-    cards:
-      - type: entities
-        title: Miner Stats local
-        show_header_toggle: true
-        entities:
-          - sensor.miner_online_time
-          - sensor.miner_online_local
-          - sensor.hashrate_local
-          - sensor.valid_shares_local
-          - sensor.invalid_shares_local
-          - sensor.rejected_shares_local
-          - sensor.pool_switches
-          - sensor.gpu0_hashrate_local
-          - sensor.gpu0_temp_local
-          - sensor.gpu0_fan_local
-          - sensor.gpu1_hashrate_local
-          - sensor.gpu1_temp_local
-          - sensor.gpu1_fan_local
-          - sensor.gpu2_hashrate_local
-          - sensor.gpu2_temp_local
-          - sensor.gpu2_fan_local
-          - sensor.mining_pool
-          - sensor.miner_stats_local
-      - type: entities
-        title: Miner Stats
-        show_header_toggle: true
-        entities:
-          - sensor.miner_balance
-          - sensor.miner_current_hashrate
-          - sensor.miner_average_hashrate
-          - sensor.miner_valid_shares
-          - sensor.miner_invalid_shares
-          - sensor.miner_stale_shares
-          - sensor.miner_active_workers
+    cards: []

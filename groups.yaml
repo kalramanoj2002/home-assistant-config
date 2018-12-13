@@ -212,6 +212,10 @@ devices:
     - device_tracker.537812471784b4346ecfd9e45a9ac8c8
     - device_tracker.RETROPIE
     - device_tracker.xboxone
+    - device_tracker.5d0ff49eaec54453a1d0219905fbca54
+    - device_tracker.nintendo3ds
+    - device_tracker.living_room_speaker
+    
 ios_stats:
   name: Charge Stats
   entities:

@@ -1,8 +1,7 @@
 - platform: history_stats
   name: TV on
-  entity_id: device_tracker.cc95d78bd8cf
+  entity_id: device_tracker.5d0ff49eaec54453a1d0219905fbca54
   state: 'home'
   type: time
+  start: '{{ now().replace(hour=0).replace(minute=0).replace(second=0) }}'
   end: '{{ now() }}'
-  duration:
-    hours: 12
