@@ -1,0 +1,27 @@
+
+- cal_id: kalramanoj2002@gmail.com
+  entities:
+  - device_id: manoj_kalra
+    ignore_availability: true
+    name: manoj kalra
+    track: true
+
+- cal_id: '#contacts@group.v.calendar.google.com'
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: true
+
+- cal_id: en.indian#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_india
+    ignore_availability: true
+    name: Holidays in India
+    track: true
+- cal_id: en.usa#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_usa
+    ignore_availability: true
+    name: Holidays in United States
+    track: true

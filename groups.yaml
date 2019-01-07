@@ -185,16 +185,12 @@ devices:
   name: Devices
   entities:
     - device_tracker.4c32759e8f6f
-    - device_tracker.a00460973b9a
     - device_tracker.bc773781479b
     - device_tracker.cc95d78bd8cf
     - device_tracker.f4f5d8d2cb9e
     - device_tracker.f80d601a14d1
     - device_tracker.086698170362
-    - device_tracker.949aa98cdf52
-    - device_tracker.b827eb0234f6
     - device_tracker.40b4cd8f3da4
-    - device_tracker.b827eb0234f6
     - device_tracker.949aa98cdf54
     - device_tracker.dc3a5e0eba11
     - device_tracker.7cb0c2dae297

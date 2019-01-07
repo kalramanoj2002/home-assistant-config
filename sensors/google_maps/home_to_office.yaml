@@ -1,6 +1,6 @@
 - platform: google_travel_time
   name: Home to port autority (Car)
-  api_key: !secret google_time_travel_api_key
+  api_key: !secret google_api_key
   origin: zone.home
   destination: !secret port_authority_address
   options: 
