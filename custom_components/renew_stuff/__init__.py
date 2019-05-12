@@ -1,0 +1,1 @@
+"""The renew_stuff component."""

@@ -31,7 +31,7 @@ def setup_platform(hass, config, add_entities, discovery_info=None):
 
     entities = []
     for resource in data.data['result']:
-        entities.append(RenewStuffSensor(resource, hass))
+        entities.append(RenewStuff(resource, hass))
 
     add_entities(entities)
 
@@ -57,7 +57,7 @@ class RenewData(object):
             return False
 
 
-class RenewStuffSensor(Entity):
+class RenewStuff(Entity):
     """Representation of a resource as an entity."""
 
     def __init__(self, data, hass):

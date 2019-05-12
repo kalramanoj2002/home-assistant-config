@@ -31,10 +31,10 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     direction = config.get(CONF_DIRECTION)
     stop_id = config.get(CONF_STOP_ID)
     name = config.get(CONF_NAME)
-    add_devices([NJTransitSensor(route, direction, stop_id, name)])
+    add_devices([Njtransit(route, direction, stop_id, name)])
 
 
-class NJTransitSensor(Entity):
+class Njtransit(Entity):
     """Representation of a Sensor."""
 
     def __init__(self, route, direction, stop_id, name):

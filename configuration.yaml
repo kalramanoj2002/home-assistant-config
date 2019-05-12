@@ -65,6 +65,8 @@ ios:
 # Enables configuration UI
 config:
 
+system_health:
+
 calendar:
   - platform: todoist
     token: !secret todoist_token
@@ -123,7 +125,8 @@ notify:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 alexa: 
 

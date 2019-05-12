@@ -3,7 +3,7 @@
 # https://github.com/dale3h/python-lovelace
 
 resources:
-  - url: /local/tracker-card.js?v=0.1.5
+  - url: /local/tracker-card.js?v=1.2.5
     type: js
   - url: https://unpkg.com/moment@2.22.2/moment.js
     type: js
@@ -25,6 +25,8 @@ views:
         show_header_toggle: false
         entities:
           - sensor.renew_manoj_passport
+          - sensor.renew_usha_passport
+          - sensor.renew_shaurya_passport
           - sensor.renew_citi_credit_card_0_interest
           - sensor.renew_car_insurance
           - sensor.renew_manoj_lic_policy
@@ -53,14 +55,14 @@ views:
         entities:
           - sensor.114x_to_city
           - sensor.117_to_city
-          - sensor.114local_to_city
+          - sensor.114_local_to_city
           - sensor.home_to_port_autority_car
           - sensor.port_autority_to_home_car
       - type: entities
         title: Date Time
         show_header_toggle: false
         entities:
-          - sensor.date__time
+          - sensor.date_time
       - type: entities
         title: Environment
         show_header_toggle: false
@@ -84,115 +86,17 @@ views:
           - sensor.owm_rain
           - sensor.owm_snow
           - sensor.owm_temperature
-      - type: entities
-        title: Machine
-        show_header_toggle: false
-        entities:
-          - sensor.load_15m
-          - sensor.load_1m
-          - sensor.load_5m
-          - sensor.swap_use
-          - sensor.swap_free
-          - sensor.swap_use_percent
-          - sensor.disk_use_percent_home
-          - sensor.memory_free
-          - sensor.processor_use
-          - sensor.last_boot
-          - sensor.rest_sensor
-          - sensor.myip
       - type: custom:tracker-card
         title:
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
       - type: entities
-        title: Devices
-        show_header_toggle: false
-        entities:
-          - device_tracker.4c32759e8f6f
-          - device_tracker.bc773781479b
-          - device_tracker.cc95d78bd8cf
-          - device_tracker.f4f5d8d2cb9e
-          - device_tracker.f80d601a14d1
-          - device_tracker.086698170362
-          - device_tracker.hassio
-          - device_tracker.snowkalra
-          - device_tracker.0c821e24f2b54b22b1f6b4a40b89a916
-          - device_tracker.hp98e7f4afe766
-          - device_tracker.mp080jyl
-          - device_tracker.manoj
-          - device_tracker.android
-          - device_tracker.537812471784b4346ecfd9e45a9ac8c8
-          - device_tracker.retropie
-          - device_tracker.xboxone
-          - device_tracker.5d0ff49eaec54453a1d0219905fbca54
-          - device_tracker.nintendo3ds
-          - device_tracker.living_room_speaker
-      - type: entities
         title: Charge Stats
         show_header_toggle: false
         entities:
           - sensor.ifone_battery_level
           - sensor.ifone_battery_state
-      - type: entities
-        title: all scripts
-        show_header_toggle: false
-        entities:
-          - script.msg_who_is_home
-      - type: entities
-        title: all automations
-        show_header_toggle: false
-        entities:
-          - automation.bed_time
-          - automation.charge_ipad
-          - automation.charge_usha_phone
-          - automation.current_hashrate
-          - automation.eth_price_going_down
-          - automation.eth_price_going_up
-          - automation.f1_staus_change
-          - automation.gpu_temp
-          - automation.gpu_temp_restart
-          - automation.invalid_shares_notify
-          - automation.invalid_shares_restart
-          - automation.local_hashrate
-          - automation.office_bus_timing
-          - automation.sun_down
-          - automation.usd_to_inr
-          - automation.update_available_notifications
-          - automation.usha_iphone_location_status
-          - automation.h1_renew_staus_change
-          - automation.h4_renew_change
-      - type: entities
-        title: all devices
-        show_header_toggle: false
-        entities:
-          - device_tracker.usha_phone_65208ecf7fb14274b776984452a51469
-          - device_tracker.manoj_phone_a20782d386ce49469c6ffefc4e14b627
-          - device_tracker.shaurya_ipad_1b74c779307f44428d737b2d544640e7
-          - device_tracker.f4f5d8d2cb9e
-          - device_tracker.bc773781479b
-          - device_tracker.cc95d78bd8cf
-          - device_tracker.4c32759e8f6f
-          - device_tracker.f80d601a14d1
-          - device_tracker.086698170362
-          - device_tracker.android
-          - device_tracker.snowkalra
-          - device_tracker.manoj
-          - device_tracker.hp98e7f4afe766
-          - device_tracker.hassio
-          - device_tracker.0c821e24f2b54b22b1f6b4a40b89a916
-          - device_tracker.537812471784b4346ecfd9e45a9ac8c8
-          - device_tracker.mp080jyl
-          - device_tracker.retropie
-          - device_tracker.xboxone
-          - device_tracker.nintendo3ds
-          - device_tracker.living_room_speaker
-          - device_tracker.5d0ff49eaec54453a1d0219905fbca54
-      - type: entities
-        title: all switches
-        show_header_toggle: false
-        entities:
-          - switch.desktop
       - type: custom:calendar-card
         numberOfDays: 21
         entities:
@@ -205,18 +109,6 @@ views:
         - calendar.contacts
         - calendar.holidays_in_india
         - calendar.holidays_in_usa
-
-      - type: entities
-        title: calendar
-        show_header_toggle: false
-        entities:
-          - calendar.all_projects
-          # - calendar.contacts
-          - calendar.due_this_week
-          - calendar.due_today
-          - calendar.holidays_in_india
-          - calendar.inbox
-          # - calendar.manoj_kalra
       - type: media-control
         entity: media_player.samsung_tv
       - type: media-control
@@ -253,7 +145,20 @@ views:
           - sensor.owm_snow
           - sensor.owm_temperature
   - title: Ad Blocker
-    cards: []
+    cards: 
+      - type: entities
+        title: Ad Blocker
+        show_header_toggle: false
+        entities:
+          - sensor.pi_hole_ads_blocked_today
+          - sensor.pi_hole_ads_percentage_blocked_today
+          - sensor.pi_hole_dns_queries_cached
+          - sensor.pi_hole_dns_queries_forwarded
+          - sensor.pi_hole_dns_queries_today
+          - sensor.pi_hole_dns_unique_clients
+          - sensor.pi_hole_dns_unique_domains
+          - sensor.pi_hole_domains_blocked
+          - sensor.pi_hole_seen_clients
   - title: PI machine
     cards:
       - type: entities
@@ -320,6 +225,31 @@ views:
           - sensor.eth_price
           - sensor.btc_price
           - sensor.ltc_price
+  - title: automations
+    cards:
+      - type: entities
+        title: automations
+        show_header_toggle: false
+        entities:
+          - automation.bed_time
+          - automation.charge_ipad
+          - automation.charge_usha_phone
+          - automation.current_hashrate
+          - automation.eth_price_going_down
+          - automation.eth_price_going_up
+          - automation.f1_staus_change
+          - automation.gpu_temp
+          - automation.gpu_temp_restart
+          - automation.invalid_shares_notify
+          - automation.invalid_shares_restart
+          - automation.local_hashrate
+          - automation.office_bus_timing
+          - automation.sun_down
+          - automation.usd_to_inr
+          - automation.update_available_notifications
+          - automation.usha_iphone_location_status
+          - automation.h1_renew_staus_change
+          - automation.h4_renew_change
   - title: Renew Stuff
     cards:
       - type: entities
@@ -336,5 +266,30 @@ views:
           - sensor.renew_usha_driving_license
           - sensor.renew_house_insurance
           - sensor.renew_springfield_house
+  - title: Calendar
+    cards:
+      - type: entities
+        title: calendar
+        show_header_toggle: false
+        entities:
+          - calendar.all_projects
+          # - calendar.contacts
+          - calendar.due_this_week
+          - calendar.due_today
+          - calendar.holidays_in_india
+          - calendar.inbox
+          # - calendar.manoj_kalra
+      - type: custom:calendar-card
+        numberOfDays: 21
+        entities:
+        - calendar.manoj_kalra
+      - type: custom:calendar-card
+        showProgressBar: false
+        name: "Birthdays/Holidays"
+        numberOfDays: 14
+        entities:
+        - calendar.contacts
+        - calendar.holidays_in_india
+        - calendar.holidays_in_usa
   - title: Miner Stats
     cards: []
