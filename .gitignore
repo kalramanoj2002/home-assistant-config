@@ -29,3 +29,5 @@ ip_bans.yaml
 config
 ozw_config
 python_scripts/*
+__init__.py
+custom_components/custom_updater/__init__.py

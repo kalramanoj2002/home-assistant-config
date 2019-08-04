@@ -27,7 +27,6 @@ views:
           - sensor.renew_manoj_passport
           - sensor.renew_usha_passport
           - sensor.renew_shaurya_passport
-          - sensor.renew_citi_credit_card_0_interest
           - sensor.renew_car_insurance
           - sensor.renew_manoj_lic_policy
           - sensor.renew_manoj_lic_policy_parent
@@ -36,6 +35,10 @@ views:
           - sensor.renew_usha_driving_license
           - sensor.renew_house_insurance
           - sensor.renew_springfield_house
+          - sensor.renew_manoj_h1b_visa
+          - sensor.renew_usha_h4_visa
+          - sensor.renew_shaurya_h4_visa
+          - sensor.renew_usha_h4_ead
       - type: entities
         title: Stocks
         show_header_toggle: false
@@ -257,7 +260,8 @@ views:
         show_header_toggle: false
         entities:
           - sensor.renew_manoj_passport
-          - sensor.renew_citi_credit_card_0_interest
+          - sensor.renew_usha_passport
+          - sensor.renew_shaurya_passport
           - sensor.renew_car_insurance
           - sensor.renew_manoj_lic_policy
           - sensor.renew_manoj_lic_policy_parent
@@ -266,6 +270,10 @@ views:
           - sensor.renew_usha_driving_license
           - sensor.renew_house_insurance
           - sensor.renew_springfield_house
+          - sensor.renew_manoj_h1b_visa
+          - sensor.renew_usha_h4_visa
+          - sensor.renew_shaurya_h4_visa
+          - sensor.renew_usha_h4_ead
   - title: Calendar
     cards:
       - type: entities

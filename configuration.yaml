@@ -16,8 +16,10 @@ homeassistant:
       friendly_name: Domains blocked.
     sensor.renew_manoj_passport:
       friendly_name: Manoj Passport
-    sensor.renew_citi_credit_card_0_interest:
-      friendly_name: Citi Credit Card
+    sensor.renew_usha_passport:
+      friendly_name: Usha Passport
+    sensor.renew_shaurya_passport:
+      friendly_name: Shaurya Passport
     sensor.renew_car_insurance:
       friendly_name: Car Insurance
     sensor.renew_manoj_lic_policy:
@@ -34,6 +36,14 @@ homeassistant:
       friendly_name: House Insurance
     sensor.renew_springfield_house:
       friendly_name: Springfield House
+    sensor.renew_manoj_h1b_visa:
+      friendly_name: Manoj H1b
+    sensor.renew_usha_h4_visa:
+      friendly_name: Usha H4
+    sensor.renew_shaurya_h4_visa:
+      friendly_name: Shaurya H4
+    sensor.renew_usha_h4_ead:
+      friendly_name: Usha H4 EAD
     script.msg_who_is_home:
       hidden: true
   # Name of the location where Home Assistant is running

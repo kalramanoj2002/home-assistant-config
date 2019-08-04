@@ -83,7 +83,6 @@ due_dates:
   name: Renew Stuff
   entities: 
     - sensor.renew_manoj_passport
-    - sensor.renew_citi_credit_card_0_interest
     - sensor.renew_car_insurance
     - sensor.renew_manoj_lic_policy
     - sensor.renew_manoj_lic_policy_parent
