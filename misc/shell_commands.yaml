@@ -1,4 +1,4 @@
-# camera_stop: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh stop'
-# camera_start: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh start'
-camera_restart: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh restart'
-restart_miner: !secret miner_restart
+# # camera_stop: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh stop'
+# # camera_start: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh start'
+# camera_restart: '/home/homeassistant/.homeassistant/shell_commands/camera_shell_cmd.sh restart'
+# restart_miner: !secret miner_restart

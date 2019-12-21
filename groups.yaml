@@ -2,7 +2,7 @@
 environment_view:
   name: Environment
   view: yes
-  entities: 
+  entities:
     - group.environment
 pi_hole_view:
   name: Ad Blocker
@@ -18,27 +18,27 @@ devices_view:
   name: Devices
   view: yes
   entities:
-    - group.devices 
+    - group.devices
 ios_stats_view:
   name: Charge Stats
   view: yes
-  entities: 
+  entities:
     - group.ios_stats
 stocks_view:
   name: Stocks
   view: yes
-  entities: 
+  entities:
     - group.stocks
     - group.gdax
 due_dates_view:
   name: Renew Stuff
   view: yes
-  entities: 
+  entities:
     - group.due_dates
 miner_stats_view:
   name: Miner Stats
   view: yes
-  entities: 
+  entities:
     - group.miner_stats_local
     - group.miner_stats
 # groups
@@ -75,13 +75,13 @@ miner_stats_local:
     - sensor.miner_stats_local
 # case_status:
 #   name: Case Status
-#   entities: 
+#   entities:
 #     - sensor.f1
 #     - sensor.h1_renew
 #     - sensor.h4_renew
 due_dates:
   name: Renew Stuff
-  entities: 
+  entities:
     - sensor.renew_manoj_passport
     - sensor.renew_car_insurance
     - sensor.renew_manoj_lic_policy
@@ -94,7 +94,7 @@ due_dates:
 stocks:
   name: Stocks
   entities:
-    - sensor.inr 
+    - sensor.inr
     - sensor.GOOGL
     - sensor.GOOG
     - sensor.MSFT
@@ -125,10 +125,10 @@ transit_time:
     - sensor.190_to_home
     - sensor.home_to_port_autority_car
     - sensor.port_autority_to_home_car
-date_time: 
+date_time:
   name: Date Time
   entities:
-    - sensor.date__time
+    - sensor.date_time
 environment:
   name: Environment
   entities:
@@ -210,7 +210,7 @@ devices:
     - device_tracker.5d0ff49eaec54453a1d0219905fbca54
     - device_tracker.nintendo3ds
     - device_tracker.living_room_speaker
-    
+
 ios_stats:
   name: Charge Stats
   entities:
@@ -219,4 +219,4 @@ ios_stats:
     - sensor.usha_battery_level
     - sensor.usha_battery_state
     - sensor.ifone_battery_level
-    - sensor.ifone_battery_state 
+    - sensor.ifone_battery_state

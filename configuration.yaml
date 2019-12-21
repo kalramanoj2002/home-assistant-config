@@ -1,171 +1,21 @@
-homeassistant:
-  customize:
-    sensor.pihole_ads_percentage_blocked_today:
-      friendly_name: Blocked Today (%)
-    sensor.pihole_dns_queries_today:
-      friendly_name: Total DNS Queries Today
-    sensor.pihole_dns_queries_cached:
-      friendly_name: DNS queries cached
-    sensor.pihole_dns_queries_forwarded:
-      friendly_name: DNS queries forwarded
-    sensor.pihole_dns_unique_clients:
-      friendly_name: Unique Clients
-    sensor.pihole_dns_unique_domains:
-      friendly_name: Unique Domains
-    sensor.pihole_domains_blocked:  
-      friendly_name: Domains blocked.
-    sensor.renew_manoj_passport:
-      friendly_name: Manoj Passport
-    sensor.renew_usha_passport:
-      friendly_name: Usha Passport
-    sensor.renew_shaurya_passport:
-      friendly_name: Shaurya Passport
-    sensor.renew_car_insurance:
-      friendly_name: Car Insurance
-    sensor.renew_manoj_lic_policy:
-      friendly_name: Manoj LIC Policy
-    sensor.renew_manoj_lic_policy_parent:
-      friendly_name: Manoj Parent's LIC Policy
-    sensor.renew_usha_lic_policy:
-      friendly_name: Usha LIC Policy
-    sensor.renew_manoj_driving_license:
-      friendly_name: Manoj Driving License
-    sensor.renew_usha_driving_license:
-      friendly_name: Usha Driving License
-    sensor.renew_house_insurance:
-      friendly_name: House Insurance
-    sensor.renew_springfield_house:
-      friendly_name: Springfield House
-    sensor.renew_manoj_h1b_visa:
-      friendly_name: Manoj H1b
-    sensor.renew_usha_h4_visa:
-      friendly_name: Usha H4
-    sensor.renew_shaurya_h4_visa:
-      friendly_name: Shaurya H4
-    sensor.renew_usha_h4_ead:
-      friendly_name: Usha H4 EAD
-    script.msg_who_is_home:
-      hidden: true
-  # Name of the location where Home Assistant is running
-  name: Home
-  # Location required to calculate the time the sun rises and sets
-  latitude: !secret homeassistant_home_latitude
-  longitude: !secret homeassistant_home_longitude
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 32
-  # metric for Metric, imperial for Imperial
-  unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/New_York
-  customize_glob: !include customize_glob.yaml
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
 
-# Enables the frontend
-frontend:
-
-weather:
-  - platform: openweathermap
-    api_key: !secret openweathermap_key
-
-# Enable python scripts
-python_script:
-
-#IOS
-ios:
-
-# Enables configuration UI
-config:
-
-system_health:
-
-calendar:
-  - platform: todoist
-    token: !secret todoist_token
-    custom_projects:
-      - name: 'All Projects'
-      - name: 'Due Today'
-        due_date_days: 0
-      - name: 'Due This Week'
-        due_date_days: 7
-
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
-  # Uncomment this to add a password (recommended!)
-  api_password: !secret http_api_password
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
   # Uncomment this if you are using SSL or running in Docker etc
   base_url: !secret http_base_url
 
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
-
-# Discover some devices automatically
-discovery:
-
-shopping_list:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time.
-history:
-
-recorder:
-  purge_keep_days: 5
-
-# View all events in a logbook
-logbook:
-
-# Track the sun
-sun:
-
-sensor: !include_dir_merge_list sensors
-
-ifttt:
-  key: !secret ifttt_key
-
-notify:
-  - platform: pushbullet
-    api_key: !secret notify_pushbullet_api_key
-
 # Text to speech
 tts:
   - platform: google_translate
-    service_name: google_say
-
-alexa: 
-
-media_player:
-  - platform: kodi
-    host: !secret kodi_host
-    port: !secret kodi_port
-    username: !secret kodi_username
-    password: !secret kodi_password
-    
-  - platform: spotify
-    client_id: !secret spotify_client_id
-    client_secret: !secret spotify_client_secret
-
-  - platform: samsungtv
-    host: !secret samsungtv_host
-    name: Samsung TV
-    mac: 70:2A:D5:4A:98:76
-
-wunderlist:
-  client_id: !secret wunderlist_client_id
-  access_token: !secret wunderlist_access_token
-
-google:
-  client_id: !secret google_client_id
-  client_secret: !secret google_client_secret
 
 lovelace:
   mode: yaml
+
+python_script:
 
 custom_updater:
   track:
@@ -178,45 +28,34 @@ custom_updater:
     - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
     - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
     - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
-    
-owntracks:
-  max_gps_accuracy: 200
 
-device_tracker:
-  - platform: nmap_tracker
-    hosts: 192.168.1.100/149
-    home_interval: 20
-  - platform: linksys_smart
-    host: 192.168.1.1
-    username: admin
-    password: !secret linksys_password
-    new_device_defaults:
-      track_new_devices: True
-      hide_if_away: False
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
 
-mqtt:
-  broker: !secret mqtt_broker
-  port: !secret mqtt_port
-  client_id: home-assistant-1
-  keepalive: 60
-  username: !secret mqtt_ha_username
-  password: !secret mqtt_ha_password
+media_player:
+  - platform: spotify
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_client_secret
 
-script: !include script.yaml
+  - platform: samsungtv
+    host: !secret samsungtv_host
+    name: Samsung TV
+    mac: 70:2A:D5:4A:98:76
 
-wake_on_lan:
-  
-intent_script: 
-  GetBusTime:  # Intent type
-    speech:
-      text: You have {{ states.sensor['122_to_city_mapple_st'].state }} min
-    action:
-      service: notify.notify
-      data_template:
-        message: Hello from an intent!
+#IOS
+ios:
 
+# Discover some devices automatically
+discovery:
+
+weather:
+  - platform: openweathermap
+    api_key: !secret openweathermap_key
+
+sensor: !include_dir_merge_list sensors
 input_number: !include_dir_merge_named input_numbers 
-# panel_iframe: !include_dir_merge_named panel_iframe 
+
 group: !include groups.yaml
 automation: !include_dir_merge_list automation
 zone: !include zones.yaml
