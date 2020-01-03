@@ -6,12 +6,6 @@ custom_header:
   compact_mode: true
 
 resources:
-  - url: /local/tracker-card.js?v=1.2.5
-    type: js
-  - url: https://unpkg.com/moment@2.22.2/moment.js
-    type: js
-  - url: /local/custom_ui/calendar-card/calendar-card.js?v=1.0.1
-    type: js
   - url: /community_plugin/atomic_calendar/atomic_calendar.js
     type: module
   - url: /community_plugin/lovelace-auto-entities/auto-entities.js
@@ -19,6 +13,12 @@ resources:
   - url: /community_plugin/weather-card/weather-card.js
     type: module
   - url: /community_plugin/custom-header/custom-header.js
+    type: module
+  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+    type: module
+  - url: /community_plugin/spotify-card/spotify-card.js
+    type: module
+  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
     type: module
 
 title: Home
@@ -141,13 +141,18 @@ views:
         eventBarColor: blue
         showProgressBar: false
         progressBarColor: blue
-      - type: media-control
+      - type: custom:mini-media-player
         entity: media_player.samsung_tv
-      - type: media-control
+        hide:
+          volume: true
+      - type: custom:mini-media-player
         entity: media_player.kodi
-      - type: media-control
+      - type: custom:mini-media-player
         entity: media_player.spotify
-      - type: media-control
+      - type: custom:spotify-card
+        client_id: !secret spotify_client_id
+        entity: media_player.spotify
+      - type: custom:mini-media-player
         entity: media_player.living_room_speaker
       - type: custom:weather-card
         entity: weather.openweathermap
@@ -238,4 +243,3 @@ views:
         - calendar.contacts
         - calendar.holidays_in_india
         - calendar.holidays_in_usa
-        

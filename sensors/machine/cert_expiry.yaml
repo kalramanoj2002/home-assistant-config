@@ -1,6 +1,0 @@
-# cert expiry
-- platform: cert_expiry
-  host: !secret http_base_url
-  port: 443
-  scan_interval: 400
-  

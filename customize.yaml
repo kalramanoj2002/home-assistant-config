@@ -1,0 +1,36 @@
+sensor.pihole_ads_percentage_blocked_today:
+  friendly_name: Blocked Today (%)
+sensor.pihole_dns_queries_today:
+  friendly_name: Total DNS Queries Today
+sensor.pihole_dns_queries_cached:
+  friendly_name: DNS queries cached
+sensor.pihole_dns_queries_forwarded:
+  friendly_name: DNS queries forwarded
+sensor.pihole_dns_unique_clients:
+  friendly_name: Unique Clients
+sensor.pihole_dns_unique_domains:
+  friendly_name: Unique Domains
+sensor.pihole_domains_blocked:  
+  friendly_name: Domains blocked.
+sensor.renew_manoj_passport:
+  friendly_name: Manoj Passport
+sensor.renew_citi_credit_card_0_interest:
+  friendly_name: Citi Credit Card
+sensor.renew_car_insurance:
+  friendly_name: Car Insurance
+sensor.renew_manoj_lic_policy:
+  friendly_name: Manoj LIC Policy
+sensor.renew_manoj_lic_policy_parent:
+  friendly_name: Manoj Parent's LIC Policy
+sensor.renew_usha_lic_policy:
+  friendly_name: Usha LIC Policy
+sensor.renew_manoj_driving_license:
+  friendly_name: Manoj Driving License
+sensor.renew_usha_driving_license:
+  friendly_name: Usha Driving License
+sensor.renew_house_insurance:
+  friendly_name: House Insurance
+sensor.renew_springfield_house:
+  friendly_name: Springfield House
+script.msg_who_is_home:
+  hidden: true
