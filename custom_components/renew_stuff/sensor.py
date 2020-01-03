@@ -74,6 +74,11 @@ class RenewStuff(Entity):
         return self._name
     
     @property
+    def friendly_name(self):
+        """Return the state of the sensor."""
+        return self._friendly_name
+
+    @property
     def state(self):
         """Return the state of the sensor."""
         return self._state

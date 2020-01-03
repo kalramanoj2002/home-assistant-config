@@ -9,6 +9,10 @@ resources:
     type: js
   - url: /local/custom_ui/calendar-card/calendar-card.js?v=1.0.1
     type: js
+  - url: /community_plugin/atomic_calendar/atomic_calendar.js
+    type: module
+  - url: /community_plugin/lovelace-auto-entities/auto-entities.js
+    type: module
 
 title: Home
 views:
@@ -20,25 +24,17 @@ views:
         camera_image: camera.radar
         show_info: true
         tap_action: dialog
-      - type: entities
-        title: Renew Stuff
-        show_header_toggle: false
-        entities:
-          - sensor.renew_manoj_passport
-          - sensor.renew_usha_passport
-          - sensor.renew_shaurya_passport
-          - sensor.renew_car_insurance
-          - sensor.renew_manoj_lic_policy
-          - sensor.renew_manoj_lic_policy_parent
-          - sensor.renew_usha_lic_policy
-          - sensor.renew_manoj_driving_license
-          - sensor.renew_usha_driving_license
-          - sensor.renew_house_insurance
-          - sensor.renew_springfield_house
-          - sensor.renew_manoj_h1b_visa
-          - sensor.renew_usha_h4_visa
-          - sensor.renew_shaurya_h4_visa
-          - sensor.renew_usha_h4_ead
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: Renew Stuff
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "sensor.renew_*"
+        sort:
+          method: state
+          numeric: true
       - type: entities
         title: Stocks
         show_header_toggle: false
@@ -100,18 +96,62 @@ views:
         entities:
           - sensor.ifone_battery_level
           - sensor.ifone_battery_state
-      - type: custom:calendar-card
-        numberOfDays: 21
+      - type: custom:atomic-calendar
+        title: "Calendar"
         entities:
         - calendar.manoj_kalra
-      - type: custom:calendar-card
-        showProgressBar: false
-        name: "Birthdays/Holidays"
-        numberOfDays: 14
+        fullDayEventText: 'All day'
+        untilText: 'Until'
+        showColors: true
+        maxDaysToShow: 15
+        showLocation: true
+        showMonth: false
+        showCurrentEventLine: false
+        dateColor: black
+        dateSize: 90
+        timeColor: blue
+        timeSize: 90
+        titleColor: black
+        titleSize: 100
+        locationIconColor: 'rgb(230, 124, 115)'
+        locationLinkColor: black
+        locationTextSize: 90
+        dimFinishedEvents: true
+        finishedEventOpacity: 0.6
+        finishedEventFilter: 'grayscale(100%)'
+        dayWrapperLineColor: black
+        eventBarColor: blue
+        showProgressBar: true
+        progressBarColor: blue
+      - type: custom:atomic-calendar
+        title: "Birthdays/Holidays"
         entities:
         - calendar.contacts
         - calendar.holidays_in_india
         - calendar.holidays_in_usa
+        fullDayEventText: 'All day'
+        untilText: 'Until'
+        showColors: true
+        maxDaysToShow: 15
+        showLocation: true
+        showMonth: false
+        showCurrentEventLine: false
+        dateColor: black
+        dateSize: 90
+        timeColor: blue
+        timeSize: 90
+        titleColor: black
+        titleSize: 100
+        locationIconColor: 'rgb(230, 124, 115)'
+        locationLinkColor: black
+        locationTextSize: 90
+        dimFinishedEvents: true
+        finishedEventOpacity: 0.6
+        finishedEventFilter: 'grayscale(100%)'
+        dayWrapperLineColor: black
+        eventBarColor: blue
+        showProgressBar: false
+        progressBarColor: blue
       - type: media-control
         entity: media_player.samsung_tv
       - type: media-control
