@@ -1,5 +1,6 @@
 - platform: alpha_vantage
   api_key: !secret alpha_vantage_api_key
+  scan_interval: 30
   symbols: 
     - symbol: GOOGL
       currency: USD

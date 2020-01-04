@@ -178,7 +178,6 @@ pi_machine:
     - sensor.processor_use
     - sensor.last_boot
     - sensor.since_last_boot
-    - sensor.rest_sensor
     - sensor.myip
 devices:
   name: Devices

@@ -210,6 +210,24 @@ views:
           - sensor.eth_price
           - sensor.btc_price
           - sensor.ltc_price
+  - title: Machine
+    cards:
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: Machine
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "sensor.myip"
+            - entity_id: "sensor.load_*"
+            - entity_id: "sensor.swap_*"
+            - entity_id: "sensor.disk_use_percent_home"
+            - entity_id: "sensor.memory_free"
+            - entity_id: "sensor.cpu_speed"
+            - entity_id: "sensor.processor_use"
+            - entity_id: "sensor.last_boot"
+            - entity_id: "sensor.since_last_boot"
   - title: automations
     cards:
       - type: custom:auto-entities
