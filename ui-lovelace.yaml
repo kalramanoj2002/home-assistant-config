@@ -20,6 +20,8 @@ resources:
     type: module
   - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
     type: module
+  - url: /community_plugin/roku-card/roku-card.js
+    type: module
 
 title: Home
 views:
@@ -142,6 +144,8 @@ views:
         showProgressBar: false
         progressBarColor: blue
       - type: custom:mini-media-player
+        entity: media_player.roku_1pe3an023790
+      - type: custom:mini-media-player
         entity: media_player.samsung_tv
         hide:
           volume: true
@@ -243,3 +247,31 @@ views:
         - calendar.contacts
         - calendar.holidays_in_india
         - calendar.holidays_in_usa
+  - title: Roku Remote
+    cards:
+      - type: "custom:roku-card"
+        entity: media_player.roku_1pe3an023790
+        apps:
+          - image: /local/netflix.webp
+            app: Netflix
+          - image: /local/hulu.webp
+            app: Hulu
+            hold_action:
+              action: call-service
+              service: media_player.select_source
+              service_data:
+                source: ESPN
+        volume_up:
+          tap_action:
+            action: call-service
+            service: remote.send_command
+            service_data:
+              entity_id: remote.roku_1pe3an023790
+              command: play
+        volume_down:
+          double_tap_action:
+            action: call-service
+            service: remote.send_command
+            service_data:
+              entity_id: remote.roku_1pe3an023790
+              command: play
