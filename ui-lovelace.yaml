@@ -22,6 +22,8 @@ resources:
     type: module
   - url: /community_plugin/roku-card/roku-card.js
     type: module
+  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+    type: js
 
 title: Home
 views:
@@ -44,19 +46,31 @@ views:
         sort:
           method: state
           numeric: true
-      - type: entities
-        title: Stocks
-        show_header_toggle: false
-        entities:
-          - sensor.inr
-          - sensor.goog
-      - type: entities
-        title: Gdax Prices
-        show_header_toggle: false
-        entities:
-          - sensor.eth_price
-          - sensor.btc_price
-          - sensor.ltc_price
+      - type: custom:vertical-stack-in-card
+        title: Track
+        cards:
+        - type: custom:mini-graph-card
+          title: INR
+          show_header_toggle: false
+          entities:
+            - sensor.inr
+        - type: custom:mini-graph-card
+          title: Stocks
+          show_header_toggle: false
+          entities:
+            - sensor.goog
+        - type: custom:mini-graph-card
+          show_header_toggle: false
+          entities:
+            - sensor.eth_price
+        - type: custom:mini-graph-card
+          show_header_toggle: false
+          entities:
+            - sensor.btc_price
+        - type: custom:mini-graph-card
+          show_header_toggle: false
+          entities:
+            - sensor.ltc_price
       - type: entities
         title: Transit Time
         show_header_toggle: false
