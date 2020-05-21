@@ -6,8 +6,6 @@ custom_header:
   compact_mode: true
 
 resources:
-  - url: /community_plugin/atomic_calendar/atomic_calendar.js
-    type: module
   - url: /community_plugin/lovelace-auto-entities/auto-entities.js
     type: module
   - url: /community_plugin/weather-card/weather-card.js
@@ -101,62 +99,6 @@ views:
         entities:
           - sensor.ifone_battery_level
           - sensor.ifone_battery_state
-      - type: custom:atomic-calendar
-        title: "Calendar"
-        entities:
-        - calendar.manoj_kalra
-        fullDayEventText: 'All day'
-        untilText: 'Until'
-        showColors: true
-        maxDaysToShow: 15
-        showLocation: true
-        showMonth: false
-        showCurrentEventLine: false
-        dateColor: black
-        dateSize: 90
-        timeColor: blue
-        timeSize: 90
-        titleColor: black
-        titleSize: 100
-        locationIconColor: 'rgb(230, 124, 115)'
-        locationLinkColor: black
-        locationTextSize: 90
-        dimFinishedEvents: true
-        finishedEventOpacity: 0.6
-        finishedEventFilter: 'grayscale(100%)'
-        dayWrapperLineColor: black
-        eventBarColor: blue
-        showProgressBar: true
-        progressBarColor: blue
-      - type: custom:atomic-calendar
-        title: "Birthdays/Holidays"
-        entities:
-        - calendar.contacts
-        - calendar.holidays_in_india
-        - calendar.holidays_in_usa
-        fullDayEventText: 'All day'
-        untilText: 'Until'
-        showColors: true
-        maxDaysToShow: 15
-        showLocation: true
-        showMonth: false
-        showCurrentEventLine: false
-        dateColor: black
-        dateSize: 90
-        timeColor: blue
-        timeSize: 90
-        titleColor: black
-        titleSize: 100
-        locationIconColor: 'rgb(230, 124, 115)'
-        locationLinkColor: black
-        locationTextSize: 90
-        dimFinishedEvents: true
-        finishedEventOpacity: 0.6
-        finishedEventFilter: 'grayscale(100%)'
-        dayWrapperLineColor: black
-        eventBarColor: blue
-        showProgressBar: false
-        progressBarColor: blue
       - type: custom:mini-media-player
         entity: media_player.roku_1pe3an023790
       - type: custom:mini-media-player
@@ -265,20 +207,6 @@ views:
         sort:
           method: state
           numeric: true
-  - title: Calendar
-    cards:
-      - type: custom:calendar-card
-        numberOfDays: 21
-        entities:
-        - calendar.manoj_kalra
-      - type: custom:calendar-card
-        showProgressBar: false
-        name: "Birthdays/Holidays"
-        numberOfDays: 14
-        entities:
-        - calendar.contacts
-        - calendar.holidays_in_india
-        - calendar.holidays_in_usa
   - title: Roku Remote
     cards:
       - type: "custom:roku-card"
