@@ -1,3 +1,8 @@
+homeassistant:
+  name: home
+  customize: !include customize.yaml
+  customize_glob: !include customize_glob.yaml
+
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
