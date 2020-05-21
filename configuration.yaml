@@ -1,8 +1,3 @@
-homeassistant:
-  name: Home
-  customize: !include customize.yaml
-  customize_glob: !include customize_glob.yaml
-  
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
@@ -10,8 +5,7 @@ default_config:
 http:
   ssl_certificate: !secret http_ssl_certificate
   ssl_key: !secret http_ssl_key
-  # Uncomment this if you are using SSL or running in Docker etc
-  base_url: !secret http_base_url
+  base_url: !secret http_external_url
 
 # Text to speech
 tts:
@@ -20,7 +14,19 @@ tts:
 lovelace:
   mode: yaml
 
-config_check:
+# python_script:
+
+# custom_updater:
+#   track:
+#     - components
+#     - cards
+#     - python_scripts
+#   card_urls:
+#     - https://raw.githubusercontent.com/rdehuyss/homeassistant-lovelace-google-calendar-card/master/custom_updater.json
+#     - https://raw.githubusercontent.com/kalkih/mini-media-player/master/tracker.json
+#     - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json
+#     - https://raw.githubusercontent.com/maykar/custom-lovelace/master/tracker.json
+#     - https://raw.githubusercontent.com/ljmerza/waze-card/master/updater.json
 
 google:
   client_id: !secret google_client_id
@@ -31,7 +37,7 @@ media_player:
     client_id: !secret spotify_client_id
     client_secret: !secret spotify_client_secret
 
-  - platform: samsungtv_custom
+  - platform: samsungtv
     host: !secret samsungtv_host
     name: Samsung TV
     mac: !secret samsungtv_host_mac
@@ -49,7 +55,6 @@ weather:
 sensor: !include_dir_merge_list sensors
 input_number: !include_dir_merge_named input_numbers 
 
-group: !include groups.yaml
 automation: !include_dir_merge_list automation
 zone: !include zones.yaml
 camera: !include_dir_merge_list cameras/
