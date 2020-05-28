@@ -32,5 +32,29 @@ sensor.renew_house_insurance:
   friendly_name: House Insurance
 sensor.renew_springfield_house:
   friendly_name: Springfield House
+sensor.india_coronavirus_confirmed:
+  friendly_name: confirmed
+sensor.india_coronavirus_current:
+  friendly_name: current
+sensor.india_coronavirus_deaths:
+  friendly_name: deaths
+sensor.india_coronavirus_recovered:
+  friendly_name: recovered
+sensor.us_coronavirus_confirmed:
+  friendly_name: confirmed
+sensor.us_coronavirus_current:
+  friendly_name: current
+sensor.us_coronavirus_deaths:
+  friendly_name: deaths
+sensor.us_coronavirus_recovered:
+  friendly_name: recovered
+sensor.worldwide_coronavirus_confirmed:
+  friendly_name: confirmed
+sensor.worldwide_coronavirus_current:
+  friendly_name: current
+sensor.worldwide_coronavirus_deaths:
+  friendly_name: deaths
+sensor.worldwide_coronavirus_recovered:
+  friendly_name: recovered
 script.msg_who_is_home:
   hidden: true

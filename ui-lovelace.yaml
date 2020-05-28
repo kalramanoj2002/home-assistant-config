@@ -27,6 +27,46 @@ title: Home
 views:
   - title: Home
     cards:
+      - type: custom:mini-graph-card
+        entities:
+        - sensor.india_coronavirus_confirmed
+        - sensor.india_coronavirus_current
+        - sensor.india_coronavirus_deaths
+        - sensor.india_coronavirus_recovered
+        align_icon: left
+        align_state: center
+        show:
+          graph: bar
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: COVID 19 (India)
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "sensor.india_coronavirus_*"
+        sort:
+          method: entity_id
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: COVID 19 (Usa)
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "sensor.us_coronavirus_*"
+        sort:
+          method: entity_id
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: COVID 19 (World)
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "sensor.worldwide_coronavirus_*"
+        sort:
+          method: entity_id
       - type: picture-entity
         title: Radar
         entity: camera.radar
@@ -78,6 +118,12 @@ views:
           - sensor.114_local_to_city
           - sensor.home_to_port_autority_car
           - sensor.port_autority_to_home_car
+      - type: entities
+        title: Printer
+        entities:
+          - sensor.hp_envy_5540_series
+          - sensor.hp_envy_5540_series_black_ink
+          - sensor.hp_envy_5540_series_tri_color_ink
       - type: entities
         title: Date Time
         show_header_toggle: false
@@ -207,6 +253,16 @@ views:
         sort:
           method: state
           numeric: true
+  - title: Router
+    cards:
+      - type: custom:auto-entities
+        card:
+          type: entities
+          title: Router
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "sensor.snowkalra_*"  
   - title: Roku Remote
     cards:
       - type: "custom:roku-card"
