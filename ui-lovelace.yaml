@@ -6,21 +6,21 @@ custom_header:
   compact_mode: true
 
 resources:
-  - url: /community_plugin/lovelace-auto-entities/auto-entities.js
+  - url: /hacsfiles/lovelace-auto-entities/auto-entities.js
     type: module
-  - url: /community_plugin/weather-card/weather-card.js
+  - url: /hacsfiles/weather-card/weather-card.js
     type: module
-  - url: /community_plugin/custom-header/custom-header.js
+  - url: /hacsfiles/custom-header/custom-header.js
     type: module
-  - url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+  - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
     type: module
-  - url: /community_plugin/spotify-card/spotify-card.js
+  - url: /hacsfiles/spotify-card/spotify-card.js
     type: module
-  - url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+  - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module
-  - url: /community_plugin/roku-card/roku-card.js
+  - url: /hacsfiles/roku-card/roku-card.js
     type: module
-  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+  - url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js
     type: js
 
 title: Home
