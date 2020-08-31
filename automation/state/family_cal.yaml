@@ -1,0 +1,12 @@
+# family calendar
+- action:
+  - data_template:
+      message: "Hey Shaurya, Time to do some {{states.calendar.family.attributes.message}}"
+      entity_id: media_player.living_room_speaker
+    service: tts.google_translate_say
+  alias: family calendar
+  id: '14989445911963'
+  trigger:
+    platform: state
+    entity_id: calendar.family
+        

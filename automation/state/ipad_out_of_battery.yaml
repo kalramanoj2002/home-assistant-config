@@ -2,8 +2,8 @@
 - action:
     - data:
         message: Hey Shaurya, Charge your IPad
-        entity_id: media_player.living_room_home 
-      service: tts.google_say
+        entity_id: media_player.living_room_speaker 
+      service: tts.google_translate_say
   alias: Charge Ipad 
   id: '149894447'
   trigger:
