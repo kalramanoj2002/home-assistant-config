@@ -5,6 +5,7 @@
     ignore_availability: true
     name: manoj kalra
     track: true
+    max_results: 50
 
 - cal_id: '#contacts@group.v.calendar.google.com'
   entities:
@@ -25,6 +26,7 @@
     ignore_availability: true
     name: Holidays in United States
     track: true
+    max_results: 10
 
 - cal_id: addressbook#contacts@group.v.calendar.google.com
   entities:
@@ -39,3 +41,4 @@
     ignore_availability: true
     name: Family
     track: true
+    max_results: 150

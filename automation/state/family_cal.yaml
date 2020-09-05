@@ -9,4 +9,5 @@
   trigger:
     platform: state
     entity_id: calendar.family
+    to: 'on'
         

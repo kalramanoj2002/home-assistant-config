@@ -30,6 +30,6 @@ config
 ozw_config
 python_scripts/*
 __init__.py
-custom_components/hacs
+custom_components/hacs/*
 custom_components/custom_updater/__init__.py
-www/community
+www/community/*
