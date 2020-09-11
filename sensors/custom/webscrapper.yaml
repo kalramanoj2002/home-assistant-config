@@ -1,0 +1,8 @@
+- platform: webscrapper
+  name: nosco
+  web_url: https://novascotiaimmigration.com/move-here/occupations-in-demand/
+  state_start_string: 'The Occupations in Demand stream targets specific'
+  state_end_string: ',' 
+  status_start_string: '<h1>Occupations in Demand</h1>'
+  status_end_string: '<h2>Eligibility</h2>' 
+  scan_interval: 120

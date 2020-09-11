@@ -36,6 +36,17 @@ views:
       - type: custom:auto-entities
         card:
           type: entities
+          title: Web scrappers
+          show_header_toggle: false
+        filter:
+          include:
+            - entity_id: "sensor.nosco"
+        sort:
+          method: state
+          numeric: true
+      - type: custom:auto-entities
+        card:
+          type: entities
           title: Renew Stuff
           show_header_toggle: false
         filter:

@@ -1,0 +1,10 @@
+# F1 Status change
+- action:
+    - data_template:
+        message: nosco staus change:- {{states.sensor.nosco.attributes.details}}
+      service: notify.mobile_app_ifone
+  alias: nosco staus change
+  id: '249393347'
+  trigger:
+    platform: state
+    entity_id: sensor.nosco
